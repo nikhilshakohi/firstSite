@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title>MOBILE OS</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  body{
+  	 background-image: url("backwallpaper.jpg");
+  background-size: cover;
+  	}
+</style>
+</head>
+
+<body onload= "startTime()">
+	<ul> 
+		<li id="wifi" class="fa fa-wifi" aria-hidden="true"></li>
+		<li id= "battery" class="fa" >&#xf240;</li>
+		<li id="time"> </li>
+	</ul>
+
+	<nav>
+		<button id="backbutton" onclick= "goBack()"> &#x25C1;</button> </li>
+		<a href="index.html">&#x25CB;</a> </li>
+		<a href="recents.html">&#x25A2;</a> </li>
+	</nav>
+
+<script>
+	function startTime()
+ 	{
+ 		var today= new Date();
+ 		var h= today.getHours();
+ 		var m= today.getMinutes();
+ 		var s= today.getSeconds();
+		h= checktime(h);		
+ 		m= checktime(m);
+		s= checktime(s);
+ 		document.getElementById('time').innerHTML = h + ":" + m + ":" + s;
+ 		var t= setTimeout(startTime, 500); 
+ 		document.getElementById('day').innerHTML = today.toDateString();
+ 	}
+ 	function checktime(i)
+ 	{
+ 		if(i<10) {
+ 			i= "0" + i; }
+ 		return i;
+ 	} 
+
+function goBack() {
+	window.history.back();
+}
+
+</script>
+</body>
+</html>
