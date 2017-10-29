@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>MOBILE OS</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  body{
+     background-image: url("social.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+    }
+</style>
+</head>
+
+<body onload= "startTime()">
+  <ul> 
+    <li id="wifi" class="fa fa-wifi" aria-hidden="true"></li>
+    <li id= "battery" class="fa" >&#xf240;</li>
+    <li id="time"> </li>
+  </ul>
+
+<h2 style="margin-left: 5%; margin-top: 5%">Find me in these social sites :)</h2> <br> 
+<h4  style="margin-left: 5%; margin-top: 0%">Click on the icons to visit the link</h4><br>
+<div style="margin-left: 5%">
+      <a style="font-size: 50px; text-decoration: none; " class="fa fa-facebook" href="https://www.facebook.com/nikhil.shakohi.5" target="_blank" ></a> <span><sub>FACEBOOK</sub></span> <br> <br>
+      <a style="font-size: 50px; text-decoration: none;" class="fa fa-instagram" href="https://www.instagram.com/nikhil_shakohi4" target="_blank" ></a> <span><sub>INSTAGRAM</sub></span> <br> <br>
+      <a style="font-size: 50px; text-decoration: none;" class="fa fa-linkedin" href="https://www.linkedin.com/in/nikhil-shakohi-060561126" target="_blank" ></a> <span><sub>LINKEDIN</sub></span> <br> <br>
+      <a style="font-size: 50px; text-decoration: none;" class="fa fa-twitter" href="https://twitter.com/Shakohi_Nikhil" target="_blank" ></a> <span><sub>TWITTER</sub></span>  <br> <br> 
+      <a style="font-size: 50px; text-decoration: none;" class="fa fa-quora" href="https://www.quora.com/profile/Nikhil-Shakohi" target="_blank" ></a> <span><sub>QUORA</sub></span>  <br> <br>  
+</div>
+
+
+
+  <nav>
+    <a href="index.html"><</a><!--button id="backbutton" onclick= "goBack()"> <</button> --></li>
+    <a href="index.html">&#x25CB;</a> </li>
+    <a href="recents.html">&#9856;</a> </li>
+  </nav>
+
+
+<script>
+  function startTime()
+  {
+    var today= new Date();
+    var h= today.getHours();
+    var m= today.getMinutes();
+    var s= today.getSeconds();
+    h= checktime(h);    
+    m= checktime(m);
+    s= checktime(s);
+    document.getElementById('time').innerHTML = h + ":" + m + ":" + s;
+    var t= setTimeout(startTime, 500); 
+    document.getElementById('day').innerHTML = today.toDateString();
+  }
+  function checktime(i)
+  {
+    if(i<10) {
+      i= "0" + i; }
+    return i;
+  } 
+
+function goBack() {
+  window.history.back();
+}
+
+</script>
+</body>
+</html>
