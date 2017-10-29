@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title>MOBILE OS</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  body{
+  	 background-image: url("wallpaper1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  	}
+</style>
+</head>
+
+<body onload= "startTime()">
+	<ul> 
+		<li id="wifi" class="fa fa-wifi" aria-hidden="true"></li>
+		<li id= "battery" class="fa" >&#xf240;</li>
+		<li id="time"> </li>
+	</ul>
+<div style="text-align: center;">
+		<h2 style="color:white; margin-top: 7%;">MY INFO</h2>
+		<img style="color: black;height: 15em; width:10em;" src="nikhil.jpg">
+		<p>I am NIKHIL SHAKOHI <br>I'm pursuing my BTech in ELECTRONICS AND COMMUNICATION ENGINEERING branch in ANDHRA UNIVERSITY <br> Coding is my hobby.<br> And by the way, the pic was in the year 2015,<br>Stay connected to stay Updated!!!</p>	
+</div>
+
+
+	<nav>
+		<a href="index.html"><</a><!--button id="backbutton" onclick= "goBack()"> <</button> --></li>
+		<a href="index.html">&#x25CB;</a> </li>
+		<a href="recents.html">&#9856;</a> </li>
+	</nav>
+
+
+<script>
+	function startTime()
+ 	{
+ 		var today= new Date();
+ 		var h= today.getHours();
+ 		var m= today.getMinutes();
+ 		var s= today.getSeconds();
+		h= checktime(h);		
+ 		m= checktime(m);
+		s= checktime(s);
+ 		document.getElementById('time').innerHTML = h + ":" + m + ":" + s;
+ 		var t= setTimeout(startTime, 500); 
+ 		document.getElementById('day').innerHTML = today.toDateString();
+ 	}
+ 	function checktime(i)
+ 	{
+ 		if(i<10) {
+ 			i= "0" + i; }
+ 		return i;
+ 	} 
+
+function goBack() {
+	window.history.back();
+}
+
+</script>
+</body>
+</html>
