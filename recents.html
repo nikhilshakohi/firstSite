@@ -3,20 +3,29 @@
 <head>
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<title>MY BLOG</title>
+	<title>MOBILE OS</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-
+<style>
+  body{
+  	 background-image: url("homewallpaper.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  	}
+</style>
 </head>
 
-<body class="body" onload= "startTime()">
+<body onload= "startTime()">
 	<ul> 
 		<li id="wifi" class="fa fa-wifi" aria-hidden="true"></li>
 		<li id= "battery" class="fa" >&#xf240;</li>
 		<li id="time"> </li>
 	</ul>
+<br>
 
-</br> 
+
+
+
 
 
 <!-- Trigger/Open The Modal -->
@@ -41,28 +50,22 @@
       <h3>Modal Footer</h3>
     </div>-->
   </div>
-</div> </br></br>
+</div></br>
 
 
 
-<h1 style="text-align: center;font-family: 'Comic Sans MS'; color: white">WELCOME TO MY BLOG</h1>
-<h3 style="text-align: center;font-family: 'Comic Sans MS'; color: black">This is only a a prototype</h3>
-<p>This blog is still under construction. Any suggestions or queries would be encouraged.</p>
-
-<div id="icons">
-    <a id="contactus" title="Contact Us" href="contact.html">&#9990;</a><span> <sub>Contact</sub> </span>
-    <a title="About Me" class="fa fa-info-circle" href="about.html"><!--&#9400;--></a> <span> <sub>About me</sub> </span>
-    <a title="Info" href="recents.html">&#8859;</a> <span> <sub>Info</sub> </span>
-    <a title="Social links" class="fa fa-group" href="sociallinks.html"></a> <span> <sub>Social links</sub> </span>
-    <a title="Mail Us" href="mail.html">&#9990;</a> <span> <sub>Mail us</sub> </span> 
-</div>
 
 
-  <nav>
-    <a href="index.html"><</a><!--button id="backbutton" onclick= "goBack()"> <</button> --></li>
-    <a href="index.html">&#x25CB;</a> </li>
-    <a href="recents.html">&#9856;</a> </li>
-  </nav>
+<h2 style="color: white; margin-top: 4em; text-align: center;">WELCOME</h2>
+<p style="color: white;text-align: center;">This blog was coded and developed using HTML, CSS and JAVASCRIPT</p>	
+
+
+	<nav>
+		<a href="index.html"><</a><!--button id="backbutton" onclick= "goBack()"> <</button> --></li>
+		<a href="index.html">&#x25CB;</a> </li>
+		<a href="recents.html">&#9856;</a> </li>
+	</nav>
+
 
 <script>
 	function startTime()
@@ -84,7 +87,9 @@
  			i= "0" + i; }
  		return i;
  	} 
-	
+
+
+
   // Get the modal
 var modal = document.getElementById('myModal');
 
