@@ -3,6 +3,41 @@ body{
      background-size: cover;
      background-repeat: no-repeat;  
     }
+
+.slideshowcontainer {
+  max-width: 18em;
+  position: relative;
+  margin: auto;
+  border: 2px dashed pink;
+}
+ 
+/*.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+} 
+.active {
+  background-color: #717171;
+}*/
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s; 
+}
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
 nav a{
 	text-decoration: none;
 	margin-left: auto;
@@ -19,7 +54,7 @@ nav a{
 nav {
 	background-color: gainsboro;
 	text-align: center;
-	opacity: .3;
+	opacity: .5;
 	bottom: 0%;
 	position: fixed;
 	width: 100%;
@@ -37,6 +72,7 @@ ul{
 li {
 	display: inline;
   padding-left: 15px;
+  margin-right: .25em;
 }
 #name {
 	text-align: center;
