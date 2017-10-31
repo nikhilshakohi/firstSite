@@ -10,7 +10,7 @@
 </head>
 
 <body class="body" onload= "startTime()">
-	<ul> 
+  <ul> 
 		<li id="wifi" class="fa fa-wifi" aria-hidden="true"></li>
 		<li id= "battery" class="fa" >&#xf240;</li>
 		<li id="time"> </li>
@@ -34,8 +34,12 @@
     </div>
     <div class="modal-body">
       <p>Quick links</p>
-      <a id="settings" href="settings.html">&#9881; Settings</a></br>
-      <a id="about" href="about.html">&#9432; About Us</a>
+      <a id="about" href="contact.html">&#9990; Contact</a></br>
+      <a id="about" class="fa fa-info-circle" href="about.html" >About me</a><br>
+      <a id="about" href="recents.html">&#8859; Info</a><br>
+      <a id="about" href="sociallinks.html" class="fa fa-group">Social links</a> <br>
+      <a id="about" href="techtips.html" class="fa fa-lightbulb-o">Tech tips</a><br>
+      
     </div>
    <!-- <div class="modal-footer">
       <h3>Modal Footer</h3>
@@ -45,24 +49,46 @@
 
 
 
+
 <h1 style="text-align: center;font-family: 'Comic Sans MS'; color: white">WELCOME TO MY BLOG</h1>
-<h3 style="text-align: center;font-family: 'Comic Sans MS'; color: black">This is only a a prototype</h3>
-<p>This blog is still under construction. Any suggestions or queries would be encouraged.</p>
+<h3 style="text-align: center;font-family: 'Comic Sans MS'; color: black">This is a mobile oriented website interface</h3>
+<p style="text-align: center;color: yellow">Here you can get to know various technology tips and other interesting topics.<br> Press on any icon in the below to enter the page or tap on Notification for quick access! </p>
+<p style="text-align: center;">(Analogous to this interface, this website is best when viewd in PC or laptop.)</p>
+
+<div class="slideshowcontainer">
+      <div class="mySlides">
+          <img src="cover1.jpg" style="width: 100%">
+      </div>
+      <div class="mySlides">
+          <img src="cover2.jpg" style="width: 100%">
+      </div>
+      <div class="mySlides">
+          <img src="cover3.jpg" style="width: 100%">
+      </div>      
+</div> <br>
+<div style="text-align: center;">
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+</div>
+
 
 <div id="icons">
     <a id="contactus" title="Contact Us" href="contact.html">&#9990;</a><span> <sub>Contact</sub> </span>
     <a title="About Me" class="fa fa-info-circle" href="about.html"><!--&#9400;--></a> <span> <sub>About me</sub> </span>
     <a title="Info" href="recents.html">&#8859;</a> <span> <sub>Info</sub> </span>
     <a title="Social links" class="fa fa-group" href="sociallinks.html"></a> <span> <sub>Social links</sub> </span>
-    <a title="Mail Us" href="mail.html">&#9990;</a> <span> <sub>Mail us</sub> </span> 
+    <a title="Tech tips" href="techtips.html" class="fa fa-lightbulb-o"></a> <span> <sub>Tech tips</sub> </span> 
 </div>
 
 
   <nav>
     <a href="index.html"><</a><!--button id="backbutton" onclick= "goBack()"> <</button> --></li>
     <a href="index.html">&#x25CB;</a> </li>
-    <a href="recents.html">&#9856;</a> </li>
+    <a href="recents.html">&#9856;</a> <span> <sub style="  bottom: 0%; position:fixed;" >&copy; NIKHIL 2017 | ALL RIGHTS RESERVED .</sub> </span> </li> 
   </nav>
+       
+
 
 <script>
 	function startTime()
@@ -113,6 +139,27 @@ window.onclick = function(event) {
 function goBack() {
   window.history.back();
 }
+
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i; 
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active","");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides,2000);
+}
+
 
 
 </script>
