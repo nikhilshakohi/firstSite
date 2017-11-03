@@ -1,14 +1,15 @@
 body{
      background-image: url("homewallpaper.jpg");
-     background-size: cover;
-     background-repeat: no-repeat;  
+  background-size: cover;
+  background-repeat: no-repeat;
+     background-color: #0077BE /*#93B874*/;  
     }
 
 .slideshowcontainer {
-  max-width: 18em;
+  width: 18em;
+  height: 10em;
   position: relative;
   margin: auto;
-  border: 2px dashed pink;
 }
  
 /*.dot {
@@ -58,9 +59,19 @@ nav {
 	bottom: 0%;
 	position: fixed;
 	width: 100%;
-	margin: 0 0 0 -5px; 
+	margin: 0 0 0 -5px;
 }
-ul{
+ 
+ul #notifname {
+  color: black;
+  position: absolute;
+  top: 0%;
+  font-weight: bold;
+  font-size: 20px;
+  font-family: Verdana;
+}
+
+ul #notificons{
 	background-color: gainsboro;
 	opacity: .5;
 	top: 0%;
@@ -68,33 +79,40 @@ ul{
 	width: 100%;
 	margin: 0 0 0 -50px;
 	text-align: right;
+  display: inline;
 }
+
 li {
-	display: inline;
-  padding-left: 15px;
+  display: inline;
+  padding-right: 10px;
   margin-right: .25em;
-}
-#name {
-	text-align: center;
 }
 #batttery {
 	font-size: 48px;
 }
 #icons{
     text-align: center;
-    width: 99.448%;
     height: 5.5em;
-    position: absolute;
-    bottom: 9%;
+    position: relative;
+    padding-top: 25px;
 }
 #icons a{
-  font-size: 4em;
-  padding-left: 20px;
-  padding-right: 0px;  
+  font-size: 55px;
+  padding: 20px; 
   text-decoration: none;
   color: blue;
-}
+  transition: width 1s, height 1s, transform .3s;
 
+}
+#iconname {
+  font-size: .3em;
+  color: white;
+  font-family: Arial;
+}
+#icons a:hover {
+      font-size: 55px;
+    transform: rotate(360deg);
+}
 
 
 /* The Modal (background) */
@@ -141,7 +159,7 @@ li {
 
 /* The Close Button */
 #modalclose {
-    color: white;
+    color: blue;
     float: right;
     font-size: 28px;
     font-weight: bold;
@@ -149,7 +167,7 @@ li {
 
 #modalclose:hover,
 #modalclose:focus {
-    color: #000;
+    color: white;
     text-decoration: none;
     cursor: pointer;
 }
