@@ -4,7 +4,8 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<title>MY BLOG</title>
-	<meta charset="utf-8">
+	<link rel="icon" type="image/jpg" href="logo.jpg">
+  <meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 </head>
@@ -39,12 +40,12 @@
     </div>
     <div class="modal-body">
       <p>Quick links</p>
-      <a id="about" href="index.html">&#9751; HOME</a> <br>
-      <a id="about" href="contact.html">&#9990; Contact</a></br>
-      <a id="about" class="fa fa-info-circle" href="about.html" >About me</a><br>
-      <a id="about" href="recents.html">&#8859; Info</a><br>
-      <a id="about" href="sociallinks.html" class="fa fa-group">Social links</a> <br>
-      <a id="about" href="techtips.html" class="fa fa-lightbulb-o">Tech tips</a><br>
+      <a id="abouthome"  class="fa fa-home" href="index.html">Home</a> <br>
+      <a id="about" class="fa fa-phone" href="contact.html">Contact</a>
+      <a id="about" class="fa fa-info-circle" href="about.html" >About_me</a>
+      <a id="about" class="fa fa-dot-circle-o" href="recents.html">Info</a><br>
+      <a id="about" href="sociallinks.html" class="fa fa-group">Social_links</a>
+      <a id="about" href="techtips.html" class="fa fa-lightbulb-o">Tech_tips</a>
       
     </div>
    <!-- <div class="modal-footer">
@@ -56,17 +57,18 @@
 
 
 
-<h1 style="text-align: center;font-family: 'Comic Sans MS'; color: white">WELCOME TO MY BLOG</h1>
-<h3 style="text-align: center;font-family: 'Comic Sans MS'; color: black">This is a mobile oriented website interface</h3>
-<p style="text-align: center;color: yellow">Here you can get to know various technology tips and other interesting topics.<br> Press on any icon in the below to enter the page or tap on Notification for quick access! </p>
-<p style="text-align: center;">(Analogous to this interface, this website is best when viewd in PC/laptop Or select 'Request Desktop site' in your browser options.)</p>
+<h1 id="welcome" style="text-align: center;font-family: 'Comic Sans MS'; color: white">WELCOME TO MY BLOG</h1>
+<h3 style="text-align: center;font-family: 'Comic Sans MS'; color: yellow ">This is a mobile oriented website interface</h3>
+<p style="text-align: center;color: white; font-size: 1.15em;">Here you can get to know various technology tips and other interesting topics.<br> Press on any icon in the below to enter the page or tap on Notification for quick access! </p>
+<p style="text-align: center; color: white;">(Analogous to this interface, this website is best when viewd in PC/laptop Or select 'Request Desktop site' in your browser options.)</p>
+<dialog> hey </dialog>
 
 <div class="slideshowcontainer">
       <div class="mySlides">
           <img src="cover1.jpg" style="width: 100%">
       </div>
       <div class="mySlides">
-          <img src="cover2.jpg" style="width: 100%">
+          <img src="cover2.jpg" style="width: 100%; height: 12em">
       </div>
       <div class="mySlides">
           <img src="cover3.jpg" style="width: 100%">
@@ -117,6 +119,14 @@
  		return i;
  	} 
 	
+
+document.addEventListener('DOMContentLoaded', 
+  function() {
+              setTimeout(function(){
+                document.getElementById('welcome').className = 'slideDown';
+              },400);
+},false);
+
   // Get the modal
 var modal = document.getElementById('myModal');
 
