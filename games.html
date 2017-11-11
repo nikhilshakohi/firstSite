@@ -1,32 +1,32 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" type="text/css" href="style.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-		<link rel="icon" type="image/jpg" href="logo.jpg">
-	<title>Games</title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/jpg" href="logo.jpg">
+  <title>Games</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
   body{
-  	 background-image: url("homewallpaper.jpg");
+     background-image: url("homewallpaper.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  	}
+    }
 </style>
 </head>
 
 <body onload= "startTime(); ageCalculator()">
-	<ul> 
+  <ul> 
     
-		<div id="notificons">
+    <div id="notificons">
         <li id="wifi" class="fa fa-wifi" aria-hidden="true"></li>
         <li id= "battery" class="fa" >&#xf240;</li>
         <li id="time"> </li>  
     
     </div>
     <div id="notifname">NIKHIL SHAKOHI</div>
-	</ul>
+  </ul>
 <br>
 
 
@@ -49,90 +49,39 @@
     </div>
     <div class="modal-body">
       <p>Quick links</p>
-         <a id="abouthome"  class="fa fa-home" href="index.html">Home</a> <br>
-      <a id="about" class="fa fa-phone" href="contact.html">Contact</a>
-      <a id="about" class="fa fa-info-circle" href="about.html" >About_me</a>
-      <a id="about" class="fa fa-dot-circle-o" href="recents.html">Info</a><br>
-      <a id="about" href="sociallinks.html" class="fa fa-group">Social_links</a>
-      <a id="about" href="techtips.html" class="fa fa-lightbulb-o">Tech_tips</a>
+      <a id="abouthome"  class="fa fa-home" href="home.html">Home</a> <br>
+      <a id="about" class="fa fa-phone" href="contact.html" style="color: yellow">Contact</a>
+      <a id="about" class="fa fa-info-circle" href="about.html" style="color: lightblue">About_me</a>
+      <a id="about" class="fa fa-dot-circle-o" href="recents.html" style="color: white">Info</a><br>
+      <a id="about" href="sociallinks.html" class="fa fa-group" style="color: #0084FF">Social_links</a>
+      <a id="about" href="techtips.html" class="fa fa-lightbulb-o" style="color: orange">Tech_tips</a> 
+      
     </div>
    <!-- <div class="modal-footer">
       <h3>Modal Footer</h3>
     </div>-->
   </div>
 </div></br>
-<!--
-<div style="text-align:center;background-color: blue; color: white;">
-    <h1> Age calculator</h1>
-    <p>Enter your Date of birth: </p>
-    <input type="date" name="Date">
-    <button>Calculate</button>  
-</div>
 
-<div style="color:white;">
-      <p>Your current Age is:</p><br>
-      <p id="calcage"></p>
-</div>
--->
+
 <h1 style="color: white;">Games will be Updated soon...</h1>
 
 
+
+
+
+<br><br><br>
+
+
   <nav>
-    <a href="index.html"><</a><!--button id="backbutton" onclick= "goBack()"> <</button> --></li>
-    <a href="index.html">&#x25CB;</a> </li>
-    <a href="recents.html">&#9856;</a> <span> <sub style="  bottom: 0%; position:fixed;" >&copy; NIKHIL 2017 | ALL RIGHTS RESERVED .</sub> </span> </li> 
+    <a href="home.html">&#9669;</a><!--button id="backbutton" onclick= "goBack()"> <</button> --></li>
+    <a href="home.html">&#x25CB;</a> </li>
+    <a href="recents.html" style="font-size: 2em">&#9744; </a> <span> <sub style="  bottom: 0%; position:fixed; font-family: 'Comic Sans MS';" >&copy; NIKHIL 2017 | ALL RIGHTS RESERVED .</sub> </span> </li> 
   </nav>
 
 
 <script>
-	function startTime()
- 	{
- 		var today= new Date();
- 		var h= today.getHours();
- 		var m= today.getMinutes();
- 		var s= today.getSeconds();
-		h= checktime(h);		
- 		m= checktime(m);
-		s= checktime(s);
- 		document.getElementById('time').innerHTML = h + ":" + m + ":" + s;
- 		var t= setTimeout(startTime, 500); 
- 		document.getElementById('day').innerHTML = today.toDateString();
- 	}
- 	function checktime(i)
- 	{
- 		if(i<10) {
- 			i= "0" + i; }
- 		return i;
- 	} 
-
-/*Age calculator
-function ageCalculator()
-{
-  var currentday = new Date();
-  var y = currentday.getYears();
-  var m = currentday.getMonths();
-  var d = currentday.getDays();
-  var h = currentday.getHours();
-  var m = currentday.getMinutes();
-  var s = currentday.getSeconds();
-  y=checktime(y);
-  m=checktime(m);
-  d=checktime(d);
-  h=checktime(h);
-  m=checktime(m);
-  s=checktime(s);
-  document.getElementById('calcage').innerHTML = y + 'years'+ m + 'months' + d + 'days' + h + 'hours' + m + 'minutes' + s + 'seconds';
-  var t = setTimeout(ageCalculator,500);
-}
-function checktime(i) {
-  if (i<10) {
-    i='0' + i;
-  }
-  return i;
-}
-*/
-
-  function ageCalculator()
+  function startTime()
   {
     var today= new Date();
     var h= today.getHours();
@@ -141,8 +90,8 @@ function checktime(i) {
     h= checktime(h);    
     m= checktime(m);
     s= checktime(s);
-    document.getElementById('calcage').innerHTML = h + ":" + m + ":" + s;
-    var t= setTimeout(ageCalculator, 500); 
+    document.getElementById('time').innerHTML = h + ":" + m + ":" + s;
+    var t= setTimeout(startTime, 500); 
     document.getElementById('day').innerHTML = today.toDateString();
   }
   function checktime(i)
@@ -151,11 +100,6 @@ function checktime(i) {
       i= "0" + i; }
     return i;
   } 
-
-
-
-
-
 
 
 
@@ -192,3 +136,185 @@ function goBack() {
 </script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+
+
+
+
+
+<!documentTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Play Snake Game</title>
+<style type="text/css">
+body {text-align:center;}
+canvas { border:5px dotted #ccc; }
+h1 { font-size:50px; text-align: center; margin: 0; padding-bottom: 25px;}
+</style>
+<script type="text/javascript">
+function play_game() 
+{
+var level = 160; // Game level, by decreasing will speed up
+var rect_w = 45; // Width 
+var rect_h = 30; // Height
+var inc_score = 50; // Score
+var snake_color = "#006699"; // Snake Color
+var ctx; // Canvas attributes
+var tn = []; // temp directions storage
+var x_dir = [-1, 0, 1, 0]; // position adjusments
+var y_dir = [0, -1, 0, 1]; // position adjusments
+var queue = []; 
+var frog = 1; // defalut food
+var map = [];
+var MR = Math.random; 
+var X = 5 + (MR() * (rect_w - 10))|0; // Calculate positions
+var Y = 5 + (MR() * (rect_h - 10))|0; // Calculate positions
+var direction = MR() * 3 | 0; 
+var interval = 0;
+var score = 0;
+var sum = 0, easy = 0;
+var i, dir;
+// getting play area 
+var c = document.getElementById('playArea');
+ctx = c.getContext('2d');
+// Map positions
+for (i = 0; i < rect_w; i++)
+{
+map[i] = [];
+}
+// random placement of snake food
+function rand_frog() 
+{
+var x, y;
+do 
+{
+x = MR() * rect_w|0;
+y = MR() * rect_h|0;
+} 
+while (map[x][y]);
+map[x][y] = 1;
+ctx.fillStyle = snake_color;
+ctx.strokeRect(x * 10+1, y * 10+1, 8, 8);
+}
+// Default somewhere placement 
+rand_frog();
+function set_game_speed() 
+{
+if (easy) 
+{
+X = (X+rect_w)%rect_w;
+Y = (Y+rect_h)%rect_h;
+}
+--inc_score;
+if (tn.length) 
+{
+dir = tn.pop();
+if ((dir % 2) !== (direction % 2)) 
+{
+direction = dir;
+}
+}
+if ((easy || (0 <= X && 0 <= Y && X < rect_w && Y < rect_h)) && 2 !== map[X][Y]) 
+{
+if (1 === map[X][Y]) 
+{
+score+= Math.max(5, inc_score);
+inc_score = 50;
+rand_frog();
+frog++;
+}
+//ctx.fillStyle("#ffffff");
+ctx.fillRect(X * 10, Y * 10, 9, 9);
+map[X][Y] = 2;
+queue.unshift([X, Y]);
+X+= x_dir[direction];
+Y+= y_dir[direction];
+if (frog < queue.length) 
+{
+dir = queue.pop()
+map[dir[0]][dir[1]] = 0;
+ctx.clearRect(dir[0] * 10, dir[1] * 10, 10, 10);
+}
+} 
+else if (!tn.length) 
+{
+var msg_score = document.getElementById("msg");
+msg_score.innerHTML = "Thank you for playing game.<br /> Your Score : <b>"+score+"</b><br /><br /><input type='button' value='Play Again' onclick='window.location.reload();' />";
+document.getElementById("playArea").style.display = 'none';
+window.clearInterval(interval);
+}
+}
+interval = window.setInterval(set_game_speed, level);
+document.onkeydown = function(e) {
+var code = e.keyCode - 37;
+if (0 <= code && code < 4 && code !== tn[0]) 
+{
+tn.unshift(code);
+} 
+else if (-5 == code) 
+{
+if (interval) 
+{
+window.clearInterval(interval);
+interval = 0;
+} 
+else 
+{
+interval = window.setInterval(set_game_speed, 60);
+}
+}
+else 
+{ 
+dir = sum + code;
+if (dir == 44||dir==94||dir==126||dir==171) {
+sum+= code
+} else if (dir === 218) easy = 1;
+}
+}
+}
+</script>
+</head>
+<body onload="play_game()">
+<h1>Play Snake Game</h1>
+<div id="msg"></div>
+<canvas id="playArea" width="450" height="300">Sorry your browser does not support HTML5</canvas>
+</body>
+</html>
+
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
