@@ -145,7 +145,7 @@ li {
 #icons{
     text-align: center;
     height: 5.5em;
-    position: relative;
+    position: absolute;
     padding-top: 25px;
     bottom: -250px;       
 }
