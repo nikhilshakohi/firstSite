@@ -44,16 +44,18 @@
       <span id="modalclose" class="close">&times;</span>
       <h2>WELCOME</h2>
        <h3>Today:  <span id="day"></span></h3>
+       <h3>Time:  <span id="time2"></span></h3>
     </div>
     <div class="modal-body">
       <p style="font-family: 'Comic Sans MS'">Quick links</p>
-      <a id="abouthome"  class="fa fa-home" href="home.html" >Home</a> <br>
-      <a id="about" class="fa fa-phone" href="contact.html" style="color: yellow">Contact</a>
-      <a id="about" class="fa fa-info-circle" href="about.html" style="color: lightblue">About_me</a>
-      <a id="about" class="fa fa-dot-circle-o" href="recents.html" style="color: white">Info</a><br>
-      <a id="about" href="sociallinks.html" class="fa fa-group" style="color: #0084FF">Social_links</a>
-      <a id="about" href="techtips.html" class="fa fa-lightbulb-o" style="color: orange">Tech_tips</a> 
-      
+      <a id="abouthome"  class="fa fa-home" href="home.html" > Home</a> <br>
+      <a id="about" class="fa fa-phone" href="contact.html" style="color: yellow">  Contact</a>
+      <a id="about" class="fa fa-info-circle" href="about.html" style="color: lightblue">  About_me</a>
+      <a id="about" class="fa fa-dot-circle-o" href="recents.html" style="color: white">  Info</a><br>
+      <a id="about" href="sociallinks.html" class="fa fa-group" style="color: #0084FF">  Social_links</a>
+      <a id="about" href="techtips.html" class="fa fa-lightbulb-o" style="color: orange">  Tech_tips</a> 
+      <a id="about"  class="fa fa-facebook" href="https://nikhilshakohi.github.io/facebook/" style="color: #3B5998" target="_blank">  Facebook Interface Blog</a>
+
     </div>
    <!-- <div class="modal-footer">
       <h3>Modal Footer</h3>
@@ -93,9 +95,10 @@
     <a id="techtips" title="Tech tips" href="techtips.html" class="fa fa-lightbulb-o" style="color: orange"> <span id="iconname"> <sub>Tech tips</sub> </span> </a>
     <a id="updates" title="Updates" href="updates.html" class="fa fa-refresh" style="color: #b0c4de"> <span id="iconname" > <sub>Updates</sub> </span> </a>
     <a id="games" title="Games" href="games.html" class="fa fa-gamepad" style="color: #66CD00"> <span id="iconname"> <sub>Games</sub> </span> </a>
-    <a id="facebook" title="Facebook Interface Blog" href="https://nikhilshakohi.github.io/facebook/" class="fa fa-facebook" style="color: rgb(59,69,192);"> <span id="iconname"> <sub>Facebook Interface Blog <sup><mark>NEW</mark></sup> </sub> </span> </a>
+    <a id="facebook" title="Facebook Interface Blog" href="https://nikhilshakohi.github.io/facebook/" target="_blank" class="fa fa-facebook" style="color: rgb(59,69,192);"> <span id="iconname"> <sub>Facebook Interface Blog <sup style="font-family: Comic Sans MS"><mark>NEW</mark></sup> </sub> </span> </a> 
+    <hr style="visibility: hidden;">
+    <br><br>
 </div>
-<br>
 
 <nav>
     <a id="navicons"  class="fa fa-chevron-left" href="home.html"></a><!--button id="backbutton" onclick= "goBack()"> <</button> --></li>
@@ -116,6 +119,7 @@
  		m= checktime(m);
 		s= checktime(s);
  		document.getElementById('time').innerHTML = h + ":" + m + ":" + s;
+ 		document.getElementById('time2').innerHTML = h + ":" + m + ":" + s;
  		var t= setTimeout(startTime, 500); 
  		document.getElementById('day').innerHTML = today.toDateString();
  	}
