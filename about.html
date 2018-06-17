@@ -4,7 +4,7 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link rel="icon" type="image/jpg" href="logo.jpg">
-	<title>About</title>
+	<title>Contact</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
@@ -59,27 +59,40 @@
       <h3>Modal Footer</h3>
     </div>-->
   </div>
-</div>
+</div> 
 
 <a href="index.html"> <button id="lockbtn" class="button"><span>LOCK BLOG</span></button></a> 
 </br></br>
 
 
 
-<div style="text-align: center; font-family: 'Comic Sans MS">
-		<h2 style="color:white; margin-top: 2%;">MY INFO</h2>
-		<img style="height: 15em; width:10em;" src="nikhil.jpg">
-		<p style="color: yellow; font-size: 1.2em; font-weight: bold;">I am NIKHIL SHAKOHI <br>I'm pursuing my BTech in ELECTRONICS AND COMMUNICATION ENGINEERING branch in ANDHRA UNIVERSITY <br> Coding is my hobby.<br> And by the way, the pic was in the year 2015,<br>To stay Updated, stay connected!!!</p>	
-</div>
+<div style="font-family: 'Comic Sans MS'; font-size: 1.2em;">
+	
+			<h3 style="color: white; text-align: center;">Thanks for checking in :)</h3>
+		<p style="text-align: center; color: yellow">This blog was is created just out of my interest;) Any suggestions or comments are heartly encouraged. <br>You can chat with me @<u>&#9993;nshakohi4@gmail.com</u> or visit my social media links which you can access from the notification! <br>For any queries or suggestions, post in the below form.&#8659;</p> 
+	<form style="color: white; text-align: center; color: white" action="mailto:nshakohi4@gmail.com" method="post" enctype="text/plain" onsubmit="return tqmessage();">
+		Name: <br>
+		<input type="text" name="name" placeholder="Your name..."> <br>
+		Email: <br>
+		<input type="email" name="email" placeholder="Your Email..."> <br>
+		Comment: <br>
+		<input style="min-height: 4em" type="text" name="comment" size="25"   placeholder="Your comment..."> <br><br>
+		<input type="submit" value="Send">
+		<input type="reset" value="Reset">
+	
+	</form>
 
-<br><br><br>
+	<p style="color: white;">If the above comment could not be posted, <mark> <a style="text-decoration: none;" href="https://mail.google.com/mail/u/0/#inbox?compose=15f8d8253755c708" target="_blank">CLICK HERE</a> </mark>  to redirect to mail</p>
+
+</div>
+	
+<hr style="visibility: hidden;"><br><br>
 
 <nav>
     <a id="navicons"  class="fa fa-chevron-left" href="home.html"></a><!--button id="backbutton" onclick= "goBack()"> <</button> --></li>
     <a id="navicons" class="fa fa-circle" href="home.html"></a> </li>
     <a id="navicons" class="fa fa-square" href="recents.html" style="font-size: 2em"> </a> <span> <sub style="  bottom: 0%; position:fixed; right: 0; font-family: 'Comic Sans MS';" >&copy; NIKHIL 2017 | ALL RIGHTS RESERVED .</sub> </span> </li> 
   </nav>
-
 
 <script>
 	function startTime()
@@ -101,6 +114,7 @@
  			i= "0" + i; }
  		return i;
  	} 
+
 
 
   // Get the modal
@@ -127,10 +141,14 @@ window.onclick = function(event) {
     if (event.target == modal) {
         modal.style.display = "none";
     }
-}
+}	
 
 function goBack() {
 	window.history.back();
+}
+
+function tqmessage() {
+	alert("Thank you for your comment!")
 }
 
 </script>
