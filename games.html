@@ -36,13 +36,10 @@
 
 
 
-<!-- Trigger/Open The Modal -->
 <button id="myBtn" class="button"><span>Notification</span></button>
 
-<!-- The Modal -->
 <div id="myModal" class="modal">
 
-  <!-- Modal content -->
   <div class="modal-content">
     <div class="modal-header">
       <span id="modalclose" class="close">&times;</span>
@@ -58,11 +55,9 @@
       <a id="about" class="fa fa-dot-circle-o" href="recents.html" style="color: white">Info</a><br>
       <a id="about" href="sociallinks.html" class="fa fa-group" style="color: #0084FF">Social_links</a>
       <a id="about" href="techtips.html" class="fa fa-lightbulb-o" style="color: orange">Tech_tips</a> 
+      <a id="about" href="games.html" class="fa fa-gamepad" style="color: #66CD00;">  Games</a>
       <a id="about"  class="fa fa-facebook" href="https://nikhilshakohi.github.io/facebook/" style="color: #3B5998" target="_blank">  Facebook Interface Blog</a>
     </div>
-   <!-- <div class="modal-footer">
-      <h3>Modal Footer</h3>
-    </div>-->
   </div>
 </div>
 
@@ -70,39 +65,29 @@
 </br></br>
 
 
-<div id="snakegamecontent">
-	<div>
-    <h1 style="color: white; margin-left: 5%;  font-family: Arial"> Snake Game</h1>
-    <input type="button" id="startgame" value="Start Game" onclick="showDiv(), play_game()" />
-</div>
-<div id="canvasdiv" style="display: none;">
-      <canvas id="playArea" width="450" height="300">Sorry your browser doesnot support HTML5</canvas>  
-</div>
-
-<div id="msg" style="text-align: center;"></div>
-	
-</div>
-
-
-<!-----------------------------TicTac TOE game----------------------------- -->
-<div id="tictactoegamecontent">
-	<div>
-    <h1 style="color: white; margin-left: 5%;  font-family: Arial"> Tic Tac Toe Game</h1>
-    <input type="button" id="startgame2" value="Start Game" onclick="showDiv2()" />
-</div>
-<div id="tictactoegame" style="display: none;">
-	 <br><br>
-	 <div id="tictactoe"></div>
-    <div align="left">
-      <span id='turn'>Player X</span>
-    </div>
-</div>   
-	
+<h1 style="color: white;">TIC TAC TOE Game!!</h1>
+<button id="startgame" onclick="startgame()" >START GAME</button>
+<h3 style="color: white;">This game is still under construction!!</h3>
+<div id="gametable" style="display: none;" >
+	<table>
+	<tr>
+		<td><button class="gamebutton" id="1" onclick="loop(this.id)" >1</button></td>
+		<td><button class="gamebutton" id="2" onclick="loop(this.id)" >2</button></td>
+		<td><button class="gamebutton" id="3" onclick="loop(this.id)" >3</button></td>
+	</tr>
+	<tr>
+		<td><button class="gamebutton" id="4" onclick="loop(this.id)" >4</button></td>
+		<td><button class="gamebutton" id="5" onclick="loop(this.id)" >5</button></td>
+		<td><button class="gamebutton" id="6" onclick="loop(this.id)" >6</button></td>
+	</tr>
+	<tr>
+		<td><button class="gamebutton" id="7" onclick="loop(this.id)" >7</button></td>
+		<td><button class="gamebutton" id="8" onclick="loop(this.id)" >8</button></td>
+		<td><button class="gamebutton" id="9" onclick="loop(this.id)" >9</button></td>
+	</tr>
+</table>	
 </div>
 
-
-
-<br><br><br>
 
 <nav>
     <a id="navicons"  class="fa fa-chevron-left" href="home.html"></a><!--button id="backbutton" onclick= "goBack()"> <</button> --></li>
@@ -132,26 +117,19 @@
     return i;
   } 
 
-  // Get the modal
 var modal = document.getElementById('myModal');
 
-// Get the button that opens the modal
 var btn = document.getElementById("myBtn");
 
-// Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
 
-// When the user clicks the button, open the modal 
 btn.onclick = function() {
     modal.style.display = "block";
 }
 
-// When the user clicks on <span> (x), close the modal
 span.onclick = function() {
     modal.style.display = "none";
 }
-
-// When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
     if (event.target == modal) {
         modal.style.display = "none";
@@ -161,280 +139,20 @@ function goBack() {
   window.history.back();
 }
 
-function showDiv() {
-  document.getElementById("canvasdiv").style.display = "block";
-  document.getElementById("tictactoegamecontent").style.display = "none";
+
+function startgame() {
+	document.getElementById("gametable").style.display = "block";
 }
 
-function play_game() 
-{
-  var level = 200;
-  var rect_w = 45;
-  var rect_h = 30;
-  var inc_score = 50;
-  var snake_color = "black";//#006699
-  var ctx;
-  var tn = [];
-  var x_dir = [-1,0,1,0];
-  var y_dir = [0,-1,0,1];
-  var queue = [];
-  var frog = 2;
-  var map = [];
-  var MR = Math.random;
-  var X = 5 + (MR() * (rect_w-10))|0;
-  var Y = 5 + (MR() * (rect_h-10))|0;
-  var direction = MR() * 3 | 0;
-  var interval = 0;
-  var score = 0;
-  var sum = 0, easy = 0;
-  var i, dir;
-  
-  var c = document.getElementById('playArea');
-  ctx = c.getContext('2d');
+function loop(clkid) {
+	document.getElementById(clkid).innerHTML = "X";
+	var id = clkid.id;
+	var newid = Math.floor((Math.random() * 10));
+	if (id != newid) {
+		document.getElementById(newid).innerHTML = "O";
+	}
 
-  for (i = 0; i < rect_w; i++)
-  {
-    map[i] = [];
-  }  
-  function rand_frog() 
-  {
-    var x,y;
-    do 
-    {
-      x = MR() * rect_w | 0;
-      y = MR() * rect_h | 0;
-    }
-    while (map[x][y]);
-    map[x][y] = 1;
-    ctx.fillStyle = snake_color;
-    ctx.strokeRect(x * 10+1, y * 10+1, 8, 8);
-  }
-  rand_frog();
-  function set_game_speed() 
-  {
-    if (easy)
-    {
-      X = (X+rect_w)%rect_w;
-      Y = (Y+rect_h)%rect_h;
-    }
-    --inc_score;
-    if( tn.length)
-    {
-      dir = tn.pop();
-      if ((dir % 2) !== (direction % 2))
-      {
-        direction = dir;
-      }
-    }
-    if ((easy || (0 <= X && 0 <= Y && X < rect_w && Y < rect_h)) && 2 !== map[X][Y])
-    {
-      if( 1 === map[X][Y])
-      {
-        score+= Math.max(5, inc_score);
-        inc_score = 50;
-        rand_frog();
-        frog++;
-      }
-      ctx.fillRect(X * 10, Y * 10, 9, 9);
-      map[X][Y] = 2;
-      queue.unshift([X,Y]);
-      X+= x_dir[direction];
-      Y+= y_dir[direction];
-      if(frog < queue.length)
-      {
-        dir = queue.pop()
-        map[dir[0]][dir[1]] = 0;
-        ctx.clearRect(dir[0] * 10, dir[1] * 10, 10, 10);
-      }
-    }
-    else if (!tn.length)
-    {
-      var msg_score = document.getElementById("msg");
-      msg_score.innerHTML = "Thank you for playing <br /> Your score : <b>"+score+"</b><br /><br /><input type ='button' value = 'Play Again' id='startgame' onclick = 'window.location.reload();' />";
-      document.getElementById("playArea").style.display='none';
-      window.clearInterval(interval);
-    }
-  }
-interval = window.setInterval(set_game_speed, level);
-document.onkeydown = function(e) {
-  var code = e.keyCode - 37;
-  if (0 <= code && code < 4 && code !== tn[0])
-  {
-    tn.unshift(code);
-  }
-  else if (-5 == code)
-  {
-    if(interval)
-    {
-      window.clearInterval(interval);
-      interval = 0;
-    }
-    else 
-    {
-      interval = window.setInterval(set_game_speed, 60);
-    }
-  }
-  else 
-  {
-    dir = sum + code;
-    if (dir==44||dir==94||dir==126||dir==171) {
-      sum+= code
-    } else if (dir === 218) easy =1;
-  }
-}    
-}
-
-
-(function(){
-var button = document.getElementById("startgame");
-
-    function toggle() {
-        if (button.style.visibility === "hidden") {
-            button.style.visibility = "visible";
-        } else {
-            button.style.visibility = "hidden";
-        }
-    }
-
-    button.addEventListener("click", toggle, false);
-})()
-
-
-
-
-
-/*--------------------------------------------------Tic Tac game code---------------------------------------------------*/
-
-/**
- * Tic Tac Toe
- *
- * A Tic Tac Toe game in HTML/JavaScript/CSS.
- *
- * No dependencies - Uses Vanilla JS
- *
- * @author: Vasanth Krishnamoorthy
- */
-
-
-function showDiv2() {
-  document.getElementById("tictactoegame").style.display = "block";
-  document.getElementById("snakegamecontent").style.display = "none";
-}
-
-
-var N_SIZE = 3,
-  EMPTY = '&nbsp;',
-  boxes = [],
-  turn = 'X',
-  score,
-  moves;
-
-/**
- * Initializes the Tic Tac Toe board and starts the game.
- */
-function init() {
-  var board = document.createElement('table');
-  board.setAttribute('border', 1);
-  board.setAttribute('cellspacing', 0);
-
-  var identifier = 1;
-  for (var i = 0; i < N_SIZE; i++) {
-    var row = document.createElement('tr');
-    board.appendChild(row);
-    for (var j = 0; j < N_SIZE; j++) {
-      var cell = document.createElement('td');
-      cell.setAttribute('height', 120);
-      cell.setAttribute('width', 120);
-      cell.setAttribute('align', 'center');
-      cell.setAttribute('valign', 'center');
-      cell.classList.add('col' + j, 'row' + i);
-      if (i == j) {
-        cell.classList.add('diagonal0');
-      }
-      if (j == N_SIZE - i - 1) {
-        cell.classList.add('diagonal1');
-      }
-      cell.identifier = identifier;
-      cell.addEventListener('click', set);
-      row.appendChild(cell);
-      boxes.push(cell);
-      identifier += identifier;
-    }
-  }
-
-  document.getElementById('tictactoe').appendChild(board);
-  startNewGame();
-}
-
-/**
- * New game
- */
-function startNewGame() {
-  score = {
-    'X': 0,
-    'O': 0
-  };
-  moves = 0;
-  turn = 'X';
-  boxes.forEach(function (square) {
-    square.innerHTML = EMPTY;
-  });
-}
-
-/**
- * Check if a win or not
- */
-function win(clicked) {
-  // Get all cell classes
-  var memberOf = clicked.className.split(/\s+/);
-  for (var i = 0; i < memberOf.length; i++) {
-    var testClass = '.' + memberOf[i];
-    var items = contains('#tictactoe ' + testClass, turn);
-    // winning condition: turn == N_SIZE
-    if (items.length == N_SIZE) {
-      return true;
-    }
-  }
-  return false;
-}
-
-/**
- * Helper function to check if NodeList from selector has a particular text
- */
-function contains(selector, text) {
-  var elements = document.querySelectorAll(selector);
-  return [].filter.call(elements, function (element) {
-    return RegExp(text).test(element.textContent);
-  });
-}
-
-/**
- * Sets clicked square and also updates the turn.
- */
-function set() {
-  if (this.innerHTML !== EMPTY) {
-    return;
-  }
-  this.innerHTML = turn;
-  moves += 1;
-  score[turn] += this.identifier;
-  if (win(this)) {
-    alert('Winner: Player ' + turn);
-    startNewGame();
-  } else if (moves === N_SIZE * N_SIZE) {
-    alert('Draw');
-    startNewGame();
-  } else {
-    turn = turn === 'X' ? 'O' : 'X';
-    document.getElementById('turn').textContent = 'Player ' + turn;
-  }
-}
-
-init();
-
-
-
-
+}	
 </script>
 </body>
 </html>
