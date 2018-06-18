@@ -170,20 +170,20 @@ li {
     top: 0;
     width: 100%; /* Full width */
     height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
+    overflow: hidden; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
+    background-color: rgba(0,0,10,0.9); /* Black w/ opacity */
 }
 
 /* Modal Content */
 .modal-content {
     position: relative;
-    background-color: rgba(0,30,70,0.4); 
+    background-color: rgba(0,90,70,0.4); 
     margin: auto;
     padding: 0;
-    border: 1px dashed blue; 
-    width: 100%;
-    height: 85%;
+    border-radius: 2em; 
+    width: auto;
+    height: auto;
    /* box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);  */
     -webkit-animation-name: animatetop;
     -webkit-animation-duration: 0.4s;
@@ -221,6 +221,9 @@ li {
     padding: 2px 16px;
 /*    background-color: #5cb85c;  */
     color: white;
+      width: auto;
+  background-color: rgb(0,50,90);
+  border-radius: 2em
 }
 .modal-header h2 {
 	text-align: center;
@@ -408,7 +411,7 @@ canvas {
 }
 
 
-#startgame {
+#startgame , #startgame2 {
   display: inline-block;
   padding: 15px 25px;
   font-size: 24px;
@@ -425,12 +428,31 @@ canvas {
 }
 
 #startgame:hover {background-color: #3e8e41}
+#startgame2:hover {background-color: #3e8e41}
 
 #startgame:active {
   background-color: #3e8e41;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
+#startgame2:hover {
+  {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+}
+/* --------------------------Tic tac toe game-----------------*/
 
 
+table {
+  border-collapse:collapse;
+}
 
+td {
+  background-color: black;
+  border: 3px solid white;
+  font-size:80px;
+  color:#ffffff;
+  border-radius: 10px 10px 10px 10px;
+}
