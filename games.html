@@ -7,7 +7,7 @@
   <title>Games</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
+<!--<style>
  body{
         background-image: url("games.jpg");
   background-size: cover;
@@ -15,7 +15,7 @@
     background-color: steelblue/*#566D7E /* #78A5A3 #444C5C  #566D7E /*#0077BE #93B874*/;  
 
     }
-</style>
+</style> -->
 </head>
 
 <body onload= "startTime()">
@@ -148,10 +148,25 @@ function loop(clkid) {
 	document.getElementById(clkid).innerHTML = "X";
 	var id = clkid.id;
 	var newid = Math.floor((Math.random() * 10));
+	if (newid == 0 && newid == id) {
+		loop(id);
+	}
+	
 	if (id != newid) {
 		document.getElementById(newid).innerHTML = "O";
 	}
-
+	var idv1 = document.getElementById('1').innerHTML;
+	var idv2 = document.getElementById('2').innerHTML;
+	var idv3 = document.getElementById('3').innerHTML;
+	var idv4 = document.getElementById('4').innerHTML;
+	var idv5 = document.getElementById('5').innerHTML;
+	var idv6 = document.getElementById('6').innerHTML;
+	var idv7 = document.getElementById('7').innerHTML;
+	var idv8 = document.getElementById('8').innerHTML;
+	var idv9 = document.getElementById('9').innerHTML;
+	if ( idv1 == idv2 == idv3 =="X") {
+		alert('X wins');
+	}
 }	
 </script>
 </body>
