@@ -1,81 +1,64 @@
 <!DOCTYPE html>
-<html>
+<html style=" background: url('lockscreen1.jpg') no-repeat fixed;">
+
 <head>
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-		<link rel="icon" type="image/jpg" href="logo.jpg">
+	<link rel="icon" type="image/jpg" href="logo.jpg">
 	<title>About</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-<!--<style>
-  body{
-    background-image: url("homewallpaper.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-     background-color: /* #566D7E*/ #0077BE/* #93B874*/;  
-    }
-</style> -->
 </head>
 
 <body onload= "startTime()">
-	<ul> 
-    
-		<div id="notificons">
-        <li id="wifi" class="fa fa-wifi" aria-hidden="true"></li>
-        <li id= "battery" class="fa" >&#xf240;</li>
-        <li id="time"> </li>  
-    
-    </div>
-    <div id="notifname">NIKHIL SHAKOHI</div>
+	<div>
+    	<a title="Lock the Blog" href="index.html"> <button id="lockbtn" class="button"><span>&#128274;</span></button></a>
+    	<button id="myBtn" title="Notifications" class="button"><span>&#x21E9;</span></button>
+ 	 </div>
+	<ul>
+    	<div id="notificons">
+    		<li id="time"> </li>
+    	    <li id= "battery" class="fa" >&#xf240;</li>  
+            <li id="wifi" class="fa fa-wifi" aria-hidden="true"></li>
+    	</div>
 	</ul>
-<br>
-
-
-
-<button id="myBtn" class="button"><span>Notification</span></button>
-
-<div id="myModal" class="modal">
-
-  <div class="modal-content">
-    <div class="modal-header">
-      <span id="modalclose" class="close">&times;</span>
-      <h2>WELCOME</h2>
-       <h3>Today:  <span id="day"></span></h3>
-       <h3>Time:  <span id="time2"></span></h3>
-    </div>
-    <div class="modal-body">
-      <p>Quick links</p>
-      <a id="abouthome"  class="fa fa-home" href="home.html">Home</a> <br>
-      <a id="about" class="fa fa-phone" href="contact.html" style="color: yellow">Contact</a>
-      <a id="about" class="fa fa-info-circle" href="about.html" style="color: lightblue">About_me</a>
-      <a id="about" class="fa fa-dot-circle-o" href="recents.html" style="color: white">Info</a><br>
-      <a id="about" href="sociallinks.html" class="fa fa-group" style="color: #0084FF">Social_links</a>
-      <a id="about" href="techtips.html" class="fa fa-lightbulb-o" style="color: orange">Tech_tips</a> 
-      <a id="about" href="games.html" class="fa fa-gamepad" style="color: #66CD00;">  Games</a>
-      <a id="about"  class="fa fa-facebook" href="https://nikhilshakohi.github.io/facebook/" style="color: #3B5998" target="_blank">  Facebook Interface Blog</a>
-    </div>
-  </div>
-</div>
-
-<a href="index.html"> <button id="lockbtn" class="button"><span>LOCK BLOG</span></button></a> 
-</br></br>
-
-
-
-<div style="text-align: center; font-family: 'Comic Sans MS">
-		<h2 style="color:white; margin-top: 2%;">MY INFO</h2>
-		<img style="height: 15em; width:10em;" src="nikhil.jpg">
-		<p style="color: yellow; font-size: 1.2em; font-weight: bold;">I am NIKHIL SHAKOHI <br>I'm pursuing my BTech in ELECTRONICS AND COMMUNICATION ENGINEERING branch in ANDHRA UNIVERSITY <br> Coding is my hobby.<br> And by the way, the pic was in the year 2015,<br>To stay Updated, stay connected!!!</p>	
-</div>
-
-<br><br><br>
-
-<nav>
-    <a id="navicons"  class="fa fa-chevron-left" href="home.html"></a><!--button id="backbutton" onclick= "goBack()"> <</button> --></li>
-    <a id="navicons" class="fa fa-circle" href="home.html"></a> </li>
-    <a id="navicons" class="fa fa-square" href="recents.html" style="font-size: 2em"> </a> <span> <sub style="  bottom: 0%; position:fixed; right: 0; font-family: 'Comic Sans MS';" >&copy; NIKHIL 2017 | ALL RIGHTS RESERVED .</sub> </span> </li> 
-  </nav>
-
+	<br>
+	<div id="myModal" class="modal">
+		<div class="modal-content">
+		    <div class="modal-header">
+		    	<span id="modalclose" class="close">&times;</span>
+		        <h2 style="font-family: 'Comic Sans MS';text-align: center;">Notifications</h2>
+		        <h3>Today:  <span id="day"></span></h3>
+		        <h3>Time:  <span id="time2"></span></h3>
+		    </div>
+		    <div class="modal-body">
+		    	<h2 style="font-family: 'Comic Sans MS'">Quick links</h2>
+		        <a id="abouthome"  class="fa fa-home" href="home.html" > Home</a> <br>
+		        <a id="about" class="fa fa-phone" href="contact.html" style="color: yellow">  Contact</a>
+		      	<a id="about" class="fa fa-camera" href="about.html" style="color: lightblue">  About_me</a>
+		      	<a id="about" class="fa fa-info-circle" href="recents.html" style="color: white">  Info</a><br>
+		      	<a id="about" href="sociallinks.html" class="fa fa-group" style="color: #0084FF">  Social_links</a>
+		      	<a id="about" href="techtips.html" class="fa fa-lightbulb-o" style="color: orange">  Tech_tips</a> 
+		      	<a id="about" href="games.html" class="fa fa-gamepad" style="color: #66CD00;">  Games</a>
+		    </div>
+		    <div class="modal-footer">
+		    	<p>No new updates..</p>
+		    </div>
+	  	</div>
+	</div>	<br>
+	<div id="homepage">
+		<div style="text-align: center; font-family: 'Arial'">
+			<h2 style="color:white; margin-top: 2%; font-family: 'Comic Sans MS';">MY INFO</h2>
+			<img style="height: 15em; width:10em;" src="nikhil.jpg">
+			<p style="color: yellow; font-size: 1.2em; font-weight: bold;">I am NIKHIL SHAKOHI <br>I'm pursuing my BTech in ELECTRONICS AND COMMUNICATION ENGINEERING branch in ANDHRA UNIVERSITY <br> Coding is my hobby.<br> And by the way, the pic was in the year 2015,<br>To stay Updated, stay connected!!!</p>	
+		</div> <br><br><br>
+	</div>
+	<nav>
+	    <a id="navicons" class="fa fa-chevron-left" onclick="naviconsfadeout()" ></a>
+	    <a id="navicons" class="fa fa-circle" onclick="naviconsfadeout()" ></a>
+	    <a id="navicons" class="fa fa-square" href="recents.html" style="font-size: 2em"> </a> 
+	</nav>
+	<sub style=" bottom: 0%; position:fixed; right: 0; font-family: 'Comic Sans MS';" >&copy; NIKHIL 2019 | ALL RIGHTS RESERVED .</sub>
 
 <script>
 	function startTime()
@@ -90,6 +73,7 @@
  		document.getElementById('time').innerHTML = h + ":" + m + ":" + s;
  		var t= setTimeout(startTime, 500); 
  		document.getElementById('day').innerHTML = today.toDateString();
+ 		document.getElementById('homepage').className = 'fadeIn';
  	}
  	function checktime(i)
  	{
@@ -98,31 +82,30 @@
  		return i;
  	} 
 
-
-var modal = document.getElementById('myModal');
-
-var btn = document.getElementById("myBtn");
-
-var span = document.getElementsByClassName("close")[0];
-
-btn.onclick = function() {
-    modal.style.display = "block";
-}
-
-span.onclick = function() {
-    modal.style.display = "none";
-}
-
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
-
-function goBack() {
-	window.history.back();
-}
-
+ 	function naviconsfadeout(){
+		setTimeout(function() {
+		document.getElementById('homepage').className = 'fadeOut';
+	},100);
+		setTimeout("location.href='home.html'",500);
+	}
+ 	
+	var modal = document.getElementById('myModal');
+	var btn = document.getElementById("myBtn");
+	var span = document.getElementsByClassName("close")[0];
+	btn.onclick = function() {
+	    modal.style.display = "block";
+	}
+	span.onclick = function() {
+	    modal.style.display = "none";
+	}
+	window.onclick = function(event) {
+	    if (event.target == modal) {
+	        modal.style.display = "none";
+	    }
+	}
+	function goBack() {
+		window.history.back();
+	}
 </script>
 </body>
 </html>
