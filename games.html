@@ -1,99 +1,81 @@
 <!DOCTYPE html>
-<html>
+<html style=" background: url('lockscreen1.jpg') no-repeat fixed;">
 <head>
   <link rel="stylesheet" type="text/css" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="icon" type="image/jpg" href="logo.jpg">
+  <link rel="icon" type="image/jpg" href="logo.jpg">
   <title>Games</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-<!--<style>
- body{
-        background-image: url("games.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-    background-color: steelblue/*#566D7E /* #78A5A3 #444C5C  #566D7E /*#0077BE #93B874*/;  
-
-    }
-</style> -->
 </head>
 
 <body onload= "startTime()">
-  <ul> 
-    
-    <div id="notificons">
-        <li id="wifi" class="fa fa-wifi" aria-hidden="true"></li>
-        <li id= "battery" class="fa" >&#xf240;</li>
-        <li id="time"> </li>  
-    
-    </div>
-    <div id="notifname">NIKHIL SHAKOHI</div>
-  </ul>
-<br>
-
-
-
-
-
-
-<button id="myBtn" class="button"><span>Notification</span></button>
-
-<div id="myModal" class="modal">
-
-  <div class="modal-content">
-    <div class="modal-header">
-      <span id="modalclose" class="close">&times;</span>
-      <h2>WELCOME</h2>
-       <h3>Today:  <span id="day"></span></h3>
-       <h3>Time:  <span id="time2"></span></h3>
-    </div>
-    <div class="modal-body">
-      <p>Quick links</p>
-      <a id="abouthome"  class="fa fa-home" href="home.html">Home</a> <br>
-      <a id="about" class="fa fa-phone" href="contact.html" style="color: yellow">Contact</a>
-      <a id="about" class="fa fa-info-circle" href="about.html" style="color: lightblue">About_me</a>
-      <a id="about" class="fa fa-dot-circle-o" href="recents.html" style="color: white">Info</a><br>
-      <a id="about" href="sociallinks.html" class="fa fa-group" style="color: #0084FF">Social_links</a>
-      <a id="about" href="techtips.html" class="fa fa-lightbulb-o" style="color: orange">Tech_tips</a> 
-      <a id="about" href="games.html" class="fa fa-gamepad" style="color: #66CD00;">  Games</a>
-      <a id="about"  class="fa fa-facebook" href="https://nikhilshakohi.github.io/facebook/" style="color: #3B5998" target="_blank">  Facebook Interface Blog</a>
-    </div>
-  </div>
-</div>
-
-<a href="index.html"> <button id="lockbtn" class="button"><span>LOCK BLOG</span></button></a> 
-</br></br>
-
-
-<h1 style="color: white;">TIC TAC TOE Game!!</h1>
-<button id="startgame" onclick="startgame()" >START GAME</button>
-<h3 style="color: white;">This game is still under construction!!</h3>
-<div id="gametable" style="display: none;" >
-	<table>
-	<tr>
-		<td><button class="gamebutton" id="1" onclick="loop(this.id)" >1</button></td>
-		<td><button class="gamebutton" id="2" onclick="loop(this.id)" >2</button></td>
-		<td><button class="gamebutton" id="3" onclick="loop(this.id)" >3</button></td>
-	</tr>
-	<tr>
-		<td><button class="gamebutton" id="4" onclick="loop(this.id)" >4</button></td>
-		<td><button class="gamebutton" id="5" onclick="loop(this.id)" >5</button></td>
-		<td><button class="gamebutton" id="6" onclick="loop(this.id)" >6</button></td>
-	</tr>
-	<tr>
-		<td><button class="gamebutton" id="7" onclick="loop(this.id)" >7</button></td>
-		<td><button class="gamebutton" id="8" onclick="loop(this.id)" >8</button></td>
-		<td><button class="gamebutton" id="9" onclick="loop(this.id)" >9</button></td>
-	</tr>
-</table>	
-</div>
-
-
-<nav>
-    <a id="navicons"  class="fa fa-chevron-left" href="home.html"></a><!--button id="backbutton" onclick= "goBack()"> <</button> --></li>
-    <a id="navicons" class="fa fa-circle" href="home.html"></a> </li>
-    <a id="navicons" class="fa fa-square" href="recents.html" style="font-size: 2em"> </a> <span> <sub style="  bottom: 0%; position:fixed; right: 0; font-family: 'Comic Sans MS';" >&copy; NIKHIL 2017 | ALL RIGHTS RESERVED .</sub> </span> </li> 
-  </nav>
+	<div>
+    	<a title="Lock the Blog" href="index.html"> <button id="lockbtn" class="button"><span>&#128274;</span></button></a>
+    	<button id="myBtn" title="Notifications" class="button"><span>&#x21E9;</span></button>
+ 	 </div>
+	<ul>
+    	<div id="notificons">
+    		<li id="time"> </li>
+    	    <li id= "battery" class="fa" >&#xf240;</li>  
+            <li id="wifi" class="fa fa-wifi" aria-hidden="true"></li>
+    	</div>
+	</ul>
+	<br>
+	<div id="myModal" class="modal">
+		<div class="modal-content">
+		    <div class="modal-header">
+		    	<span id="modalclose" class="close">&times;</span>
+		        <h2 style="font-family: 'Comic Sans MS';text-align: center;">Notifications</h2>
+		        <h3>Today:  <span id="day"></span></h3>
+		        <h3>Time:  <span id="time2"></span></h3>
+		    </div>
+		    <div class="modal-body">
+		    	<h2 style="font-family: 'Comic Sans MS'">Quick links</h2>
+		        <a id="abouthome"  class="fa fa-home" href="home.html" > Home</a> <br>
+		        <a id="about" class="fa fa-phone" href="contact.html" style="color: yellow">  Contact</a>
+		      	<a id="about" class="fa fa-camera" href="about.html" style="color: lightblue">  About_me</a>
+		      	<a id="about" class="fa fa-info-circle" href="recents.html" style="color: white">  Info</a><br>
+		      	<a id="about" href="sociallinks.html" class="fa fa-group" style="color: #0084FF">  Social_links</a>
+		      	<a id="about" href="techtips.html" class="fa fa-lightbulb-o" style="color: orange">  Tech_tips</a> 
+		      	<a id="about" href="games.html" class="fa fa-gamepad" style="color: #66CD00;">  Games</a>
+		    </div>
+		    <div class="modal-footer">
+		    	<p>No new updates..</p>
+		    </div>
+	  	</div>
+	</div>	<br>
+	<div id="homepage">
+		<br><br>
+		<h1 style="color: white;">TIC TAC TOE Game!!</h1>
+		<button id="startgame" onclick="startgame()" >START GAME</button>
+		<h3 style="color: white;">This game is still under construction!!</h3>
+		<div id="gametable" style="display: none;" >
+			<table>
+				<tr>
+					<td><button class="gamebutton" id="1" onclick="loop(this.id)" >1</button></td>
+					<td><button class="gamebutton" id="2" onclick="loop(this.id)" >2</button></td>
+					<td><button class="gamebutton" id="3" onclick="loop(this.id)" >3</button></td>
+				</tr>
+				<tr>
+					<td><button class="gamebutton" id="4" onclick="loop(this.id)" >4</button></td>
+					<td><button class="gamebutton" id="5" onclick="loop(this.id)" >5</button></td>
+					<td><button class="gamebutton" id="6" onclick="loop(this.id)" >6</button></td>
+				</tr>
+				<tr>
+					<td><button class="gamebutton" id="7" onclick="loop(this.id)" >7</button></td>
+					<td><button class="gamebutton" id="8" onclick="loop(this.id)" >8</button></td>
+					<td><button class="gamebutton" id="9" onclick="loop(this.id)" >9</button></td>
+				</tr>
+			</table>	
+		</div>	
+	</div>
+	<nav>
+	    <a id="navicons" class="fa fa-chevron-left" onclick="naviconsfadeout()" ></a>
+	    <a id="navicons" class="fa fa-circle" onclick="naviconsfadeout()" ></a>
+	    <a id="navicons" class="fa fa-square" href="recents.html" style="font-size: 2em"> </a> 
+	</nav>
+	<sub style=" bottom: 0%; position:fixed; right: 0; font-family: 'Comic Sans MS';" >&copy; NIKHIL 2019 | ALL RIGHTS RESERVED .</sub>
 
 
 <script>
@@ -109,6 +91,7 @@
     document.getElementById('time').innerHTML = h + ":" + m + ":" + s;
     var t= setTimeout(startTime, 500); 
     document.getElementById('day').innerHTML = today.toDateString();
+    document.getElementById('homepage').className = 'fadeIn';
   }
   function checktime(i)
   {
@@ -116,6 +99,13 @@
       i= "0" + i; }
     return i;
   } 
+
+  function naviconsfadeout(){
+		setTimeout(function() {
+		document.getElementById('homepage').className = 'fadeOut';
+	},100);
+		setTimeout("location.href='home.html'",500);
+	}
 
 var modal = document.getElementById('myModal');
 
