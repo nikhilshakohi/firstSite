@@ -1,27 +1,212 @@
-html { 
-  background: url("lockscreen.jpg") no-repeat center center fixed; 
+html {  
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-}
-#welcome {
-    visibility: hidden;
+  background-color: mediumseagreen;
 }
 
+ul #notificons{
+  background-color: gainsboro;
+  opacity: .5;
+  top: 0%;
+  position: fixed;
+  width: 100%;
+  left: 0;
+}
+ul #notifname {
+  color: black;
+  position: fixed;
+  top: 0%;
+  margin-left: 1em;
+  font-weight: bold;
+  font-size: 18px;
+  font-family: Verdana;
+}
+li {
+  float: right;
+  display: inline;
+  padding-right: 1em;
+}
+#locktime {
+  color: white;
+  text-align: center;
+  font-size: 75px;
+  font-family: 'Arial';
+  font-weight: 500;
+}
+#today {
+  color: white;
+  text-align: center;
+  font-family: 'Comic Sans MS';
+  font-size: 25px;
+}
+
+.fadeOut {
+  -webkit-animation-name: fadeOut;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fadeOut;
+  animation-duration: 1.5s; 
+}
+@-webkit-keyframes fadeOut {
+  from {opacity: 1}
+  to {opacity: 0}
+}
+@keyframes fadeOut {
+  from {opacity: 1}
+  to {opacity: 0}
+}
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fadeIn;
+  animation-duration: 1.5s; 
+}
+@-webkit-keyframes fadeIn {
+  from {opacity: 0}
+  to {opacity: 1}
+}
+@keyframes fadeIn {
+  from {opacity: 0}
+  to {opacity: 1}
+}
+
+#unlockbtn {
+  text-decoration: none;
+  color: white;
+  border: none;
+  background-color: #00bfff;
+  background-color: rgba(0,0,0,0.5);
+  padding: 10px;
+  border-radius: 100px;
+  text-align: center;
+  font-size: 20px;
+  width: auto;
+  cursor: pointer;
+  margin: auto;
+}
+#unlockbtn span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+#unlockbtn span:after {
+  content: "  Click to unlock";
+  position: absolute;
+  opacity: 0;
+  right: -0.5em;
+  transition: 0.5s;
+}
+#unlockbtn:hover span {
+  padding-right: 7em;
+}
+#unlockbtn:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+nav {
+  background-color: silver;
+  text-align: center;
+  opacity: .5;
+  bottom: 0px;
+  position:fixed;
+  left: 0;
+  right: 0;
+}
+#navicons {
+  padding: 15px 25px 15px 25px;
+  font-size: 2em;
+  color: blue;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#lockbtn {
+  border-radius: 100px;
+  z-index: 1;
+  background-color: #00bfff;
+  background-color: rgba(50,10,20,0.8);
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 20px;
+  padding:10px 30px 10px 15px;
+  width: 50px;
+  top: 20px;
+  cursor: pointer;
+  left: 1%;
+  position: fixed;
+}
+#lockbtn span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+#lockbtn span:after {
+  content: "LockBlog";
+  position: relative;
+  opacity: 0;
+  right: 20px;
+  transition: 0.5s;
+}
+#lockbtn:hover span {
+  padding-right: auto;
+}
+#lockbtn:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+.button {
+  border-radius: 100px;
+  z-index: 1;
+  background-color: #00bfff;
+  background-color: rgba(20,50,10,0.8);
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 20px;
+  padding:10px 30px 10px 20px;
+  width: 50px;
+  top: 65px;
+  cursor: pointer;
+  left: 1%;
+  position: fixed;
+}
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+.button span:after {
+  content: "Notifications";
+  position: relative;
+  opacity: 0;
+  right: 20px;
+  transition: 0.5s;
+}
+.button:hover span {
+  padding-right: auto;
+}
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+#welcome {
+  visibility: hidden;
+}
 .slideDown {
   animation-name: slideDown;
   -webkit-animation-name: slideDown;
-
   animation-duration: 1s;
   -webkit-animation-duration: 1s;
-
   animation-timing-function: ease;
   -webkit-animation-duration: ease;
-
   visibility: visible !important;
 }
-
 @keyframes slideDown{
     0% {
       transform: translateY(-100%);
@@ -62,195 +247,117 @@ html {
       transform: translateY(0%);
     } 
 }
-
+.slideUp {
+  animation-name: slideUp;
+  -webkit-animation-name: slideUp;
+  animation-duration: 1.2s;
+  -webkit-animation-duration: 1.2s;
+  animation-timing-function: ease;
+  -webkit-animation-duration: ease;
+  visibility: visible !important;
+}
+@keyframes slideUp{
+    0% {
+      transform: translateY(0%);
+    }
+    100% {
+      transform: translateY(-200%);
+    }
+}
+@-webkit-keyframes slideUp {
+    0% {
+      transform: translateY(0%);
+    }
+    100% {
+      transform: translateY(-200%);
+    } 
+}
 .slideshowcontainer {
   width: 18em;
   height: 10em;
   position: relative;
   margin: auto;
 }
- 
-/*.dot {
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-} 
-.active {
-  background-color: #717171;
-}*/
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s; 
-}
-@-webkit-keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
-}
-@keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
-}
-
-#navicons {
-  padding: 15px 25px 15px 25px;
-  font-size: 2em;
-  text-decoration: none;
-  cursor: pointer;
-}
-nav {
-	background-color: silver;
-	text-align: center;
-	opacity: .5;
-	bottom: 0px;
-	position:fixed;
-  left: 0;
-  right: 0;
-}
- 
-ul #notifname {
-  color: black;
-  position: absolute;
-  top: 0%;
-  font-weight: bold;
-  font-size: 20px;
-  font-family: Verdana;
-}
-
-ul #notificons{
-	background-color: gainsboro;
-	opacity: .5;
-	top: 0%;
-	position: fixed;
-	width: 100%;
-	margin: 0 0 0 -50px;
-	text-align: right;
-  display: inline;
-}
-
-li {
-  display: inline;
-  padding-right: 10px;
-  margin-right: .25em;
-}
-#batttery {
-	font-size: 48px;
-}
-#icons{
-    text-align: center;
-    height: 5.5em;
-    position: relative;
-    padding-top: 25px;
-    bottom: 10px; 
-}
-#icons a{
-  font-size: 55px;
-  padding: 20px; 
-  text-decoration: none;
-  transition: width 1s, height 1s, transform .3s;
-
-}
-#iconname {
-  font-size: .3em;
-  color: white;
-  font-family: Arial;
-}
-#icons a:hover {
-
-    transform: rotate(360deg);
-}
-
 .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
+    display: none; 
+    position: fixed;
+    z-index: 1;
+    padding-top: 30px;
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: hidden; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,10,0.9); /* Black w/ opacity */
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,10,0.9);
 }
-
 .modal-content {
     position: relative;
     background-color: rgba(255,255,255,0.1); 
     margin: auto;
-    padding: 0;
+    padding: 10px;
     border-radius: 2em; 
-    width: auto;
-    height: auto;
-   /* box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);  */
+    width: 90%;
+    height: 100%;
     -webkit-animation-name: animatetop;
-    -webkit-animation-duration: 0.4s;
+    -webkit-animation-duration: 0.7s;
     animation-name: animatetop;
-    animation-duration: 0.4s
+    animation-duration: 0.7s
 }
 @-webkit-keyframes animatetop {
     from {top:-300px; opacity:0} 
     to {top:0; opacity:1}
 }
-
 @keyframes animatetop {
     from {top:-300px; opacity:0}
     to {top:0; opacity:1}
 }
-
 #modalclose {
     color: white;
     float: right;
-    font-size: 28px;
+    font-size: 40px;
     font-weight: bold;
 }
-
 #modalclose:hover,
 #modalclose:focus {
     color: red;
     text-decoration: none;
     cursor: pointer;
 }
-
 .modal-header {
-    padding: 2px 16px;
-/*    background-color: #5cb85c;  */
-    color: white;
-      width: auto;
-  background-color: rgba(0,50,90,0.7);
-  border-radius: 2em
-}
-.modal-header h2 {
-	text-align: center;
+  padding: 5px 20px;
+  border-radius: 1em 1em 0em 0em;
+  color: white;
+  width: auto;
+  background-color: rgba(255,255,255,0.4);
 }
 .modal-header #day , #time2{
-	font-family: "Arial";
+  font-family: "Arial";
 }
-
 .modal-body {
-	padding: 2px 16px;
-	color: white;
+  padding: 5px 50px;
+  border-radius: 0em;
+  background-color: rgba(255,255,255,0.2);
+  color: white;
   text-align: center;
 }
-
 .modal-body #abouthome {
   text-decoration: none;
+  border-radius: 1em;
+  background-color: rgba(0,0,0,0.3);
   font-size: 2em;
   font-weight: bolder;
   color: green;
   transition: width 1s, height 1s, transform .3s;
   padding: 20px;
 }
-
 .modal-body #about {
-	text-decoration: none;
+  text-decoration: none;
+  font-family: arial;
+  border-radius: 1em;
+  background-color: rgba(0,0,0,0.3);
   font-size: 1.3em;
-	font-weight: bolder;
+  font-weight: bolder;
   color: green;
   transition: width 1s, height 1s, transform .3s;
   padding: 15px;
@@ -259,147 +366,49 @@ li {
   color: violet;
   transform: rotateX(360deg);
 }
-
 .modal-footer {
     padding: 2px 16px;
-    background-color: #5cb85c;
+    border-radius: 0em 0em 1em 1em;
+    background-color: rgba(255,255,255,0.1);
     color: white;
 }
-.button {
-  border-radius: 100px;
-  background-color: #00bfff;
-  background-color: rgba(0,0,0,0.25);
+#icons{
+    text-align: center;
+    position: relative;
+    padding-top: 25px;
+    filter: contrast(90%);
+}
+#icons a{
+  font-size: 55px;
+  padding:20px 20px 7px 20px; 
+  text-decoration: none;
+  transition: width 1s, height 1s, transform 0.3s ease;
+}
+#iconname {
+  font-size: 13px;
+  color: white;
+  font-family: Arial;
+}
+#icons a:hover {
+  filter: contrast(500%) brightness(200%);
+  transform: scale(1.3);
+}
+
+#inputbox {
+  background-color: rgba(0,0,0,0.5); 
   border: none;
-  color: #FFFFFF;
-  text-align: center;
+  color: lightgreen;
+  padding: 5px;
   font-size: 20px;
-  padding: 7px;
-  width: 150px;
-  cursor: pointer;
-  margin: 5px;
+  border-radius: 10px;
+  box-sizing: border-box;
 }
-
-.button span {
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-  transition: 0.5s;
-}
-
-.button span:after {
-  content: "\21e9";
-  position: absolute;
-  opacity: 0;
-  right: -20px;
-  transition: 0.5s;
-}
-
-.button:hover span {
-  padding-right: 25px;
-}
-
-
-.button:hover span:after {
-  opacity: 1;
-  right: 0;
-}
-.container {
-  margin: left;
-  width: 1200px;
-}
-#lockbtn {
-  text-decoration: none;
-  color: white;
-  background-color: #00bfff;
-  background-color: rgba(0,0,0,0.28);
+.contactformbutton {
   padding: 10px;
-  position: absolute;
-  border-radius: 100px;
-  text-align: center;
+  margin-right: 10px;
   font-size: 20px;
-  width: 170px;
+  border: none;
   cursor: pointer;
-  margin: 5px;
-}
-
-#lockbtn span {
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-  transition: 0.5s;
-}
-
-#lockbtn span:after {
-  content: "\02606";
-  position: absolute;
-  opacity: 0;
-  right: -20px;
-  transition: 0.5s;
-}
-
-#lockbtn:hover span {
-  padding-right: 25px;
-}
-
-
-#lockbtn:hover span:after {
-  opacity: 1;
-  right: 0;
-}
-
-
-#unlockbtn {
-  text-decoration: none;
-  color: white;
-  background-color: #00bfff;
-  background-color: rgba(0,0,0,0.5);
-  padding: 10px;
-  border-radius: 100px;
-  text-align: center;
-  font-size: 20px;
-  width: auto;
-  cursor: pointer;
-  margin: auto;
-}
-
-#unlockbtn span {
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-  transition: 0.5s;
-}
-
-#unlockbtn span:after {
-  content: "  Click to unlock";
-  position: absolute;
-  opacity: 0;
-  right: -0.5em;
-  transition: 0.5s;
-}
-
-#unlockbtn:hover span {
-  padding-right: 7em;
-}
-
-
-#unlockbtn:hover span:after {
-  opacity: 1;
-  right: 0;
-}
-
-#locktime {
-  color: white;
-  text-align: center;
-  font-size: 75px;
-  font-family: 'Arial';
-  font-weight: 500;
-}
-
-#today {
-  color: white;
-  text-align: center;
-  font-family: 'Comic Sans MS';
-  font-size: 25px;
 }
 
  tr, td{
