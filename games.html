@@ -45,31 +45,34 @@
 		    </div>
 	  	</div>
 	</div>	<br>
-	<div id="homepage">
+	<div id="gamehome" style="font-family: Comic Sans MS">
 		<br><br>
-		<h1 style="color: white;">TIC TAC TOE Game!!</h1>
-		<button id="startgame" onclick="startgame()" >START GAME</button>
-		<h3 style="color: white;">This game is still under construction!!</h3>
+		<h1 style="color: yellow;">TIC TAC TOE Game!!</h1>
+		<button id="startgame" onclick="startgame()" >START GAME</button> 
+		<h3 style="color: lightgreen;">Win this game to get a reward of ₹1000!!:p</h3>
+		<div id="scoreboard" style="display: none; color: white;align-items: center;">
+			<h2>OOPs! You've missed it! The game and the ₹1000..</h2>
+			<h3 id="wingame" style="display: none;"> <p> You LOST </p>AI wins.. It always have.. :p</h3>
+			<h3 id="drawgame" style="display: none;"><p> It's a DRAW</p> Your intelligence level equals to that of AI.. :p</h3>
+			<h3>Lets have another try...</h3>
+			<button id="replaygame" onclick="window.location.reload();" style="margin: auto;">Try Again</button>
+		</div>
+		
 		<div id="gametable" style="display: none;" >
-			<table>
-				<tr>
-					<td><button class="gamebutton" id="1" onclick="loop(this.id)" >1</button></td>
-					<td><button class="gamebutton" id="2" onclick="loop(this.id)" >2</button></td>
-					<td><button class="gamebutton" id="3" onclick="loop(this.id)" >3</button></td>
-				</tr>
-				<tr>
-					<td><button class="gamebutton" id="4" onclick="loop(this.id)" >4</button></td>
-					<td><button class="gamebutton" id="5" onclick="loop(this.id)" >5</button></td>
-					<td><button class="gamebutton" id="6" onclick="loop(this.id)" >6</button></td>
-				</tr>
-				<tr>
-					<td><button class="gamebutton" id="7" onclick="loop(this.id)" >7</button></td>
-					<td><button class="gamebutton" id="8" onclick="loop(this.id)" >8</button></td>
-					<td><button class="gamebutton" id="9" onclick="loop(this.id)" >9</button></td>
-				</tr>
-			</table>	
+			<div style="background-color: rgba(0,0,0,0.65);padding: 5px;">
+				<p style="color: white">Lets go! </p>
+				<button id="1"><span id="null1" class="valuenull">-</span><span id="X1" class="valueX" style="display: none;">X</span><span id="O1" class="valueO" style="display: none;">O</span></button>
+				<button id="2"><span id="null2" class="valuenull">-</span><span id="X2" class="valueX" style="display: none;">X</span><span id="O2" class="valueO" style="display: none;">O</span></button>
+				<button id="3"><span id="null3" class="valuenull">-</span><span id="X3" class="valueX" style="display: none;">X</span><span id="O3" class="valueO" style="display: none;">O</span></button> <br>
+				<button id="4"><span id="null4" class="valuenull">-</span><span id="X4" class="valueX" style="display: none;">X</span><span id="O4" class="valueO" style="display: none;">O</span></button>
+				<button id="5"><span id="null5" class="valuenull">-</span><span id="X5" class="valueX" style="display: none;">X</span><span id="O5" class="valueO" style="display: none;">O</span></button>
+				<button id="6"><span id="null6" class="valuenull">-</span><span id="X6" class="valueX" style="display: none;">X</span><span id="O6" class="valueO" style="display: none;">O</span></button> <br>
+				<button id="7"><span id="null7" class="valuenull">-</span><span id="X7" class="valueX" style="display: none;">X</span><span id="O7" class="valueO" style="display: none;">O</span></button>
+				<button id="8"><span id="null8" class="valuenull">-</span><span id="X8" class="valueX" style="display: none;">X</span><span id="O8" class="valueO" style="display: none;">O</span></button>
+				<button id="9"><span id="null9" class="valuenull">-</span><span id="X9" class="valueX" style="display: none;">X</span><span id="O9" class="valueO" style="display: none;">O</span></button>
+			</div>
 		</div>	
-	</div>
+	</div> <br><br><br>
 	<nav>
 	    <a id="navicons" class="fa fa-chevron-left" onclick="naviconsfadeout()" ></a>
 	    <a id="navicons" class="fa fa-circle" onclick="naviconsfadeout()" ></a>
@@ -132,32 +135,255 @@ function goBack() {
 
 function startgame() {
 	document.getElementById("gametable").style.display = "block";
-}
+	document.getElementById("startgame").style.display = "none";
+	document.getElementById("scoreboard").style,display = "none";
+	document.getElementById("1").onclick = function() {
+		document.getElementById("X1").style.display = "block";
+		document.getElementById("null1").style.display = "none";
+		checkO();
+		checkwin();
+		document.getElementById("1").disabled = true;
+	}
+	document.getElementById("2").onclick = function() {
+		document.getElementById("X2").style.display = "block";
+		document.getElementById("null2").style.display = "none";
+		checkO();
+		checkwin();
+		document.getElementById("2").disabled = true;
+	}
+	document.getElementById("3").onclick = function() {
+		document.getElementById("X3").style.display = "block";
+		document.getElementById("null3").style.display = "none";
+		checkO();
+		checkwin();
+		document.getElementById("3").disabled = true;
+	}
+	document.getElementById("4").onclick = function() {
+		document.getElementById("X4").style.display = "block";
+		document.getElementById("null4").style.display = "none";
+		checkO();
+		checkwin();
+		document.getElementById("4").disabled = true;
+	}
+	document.getElementById("5").onclick = function() {
+		document.getElementById("X5").style.display = "block";
+		document.getElementById("null5").style.display = "none";
+		checkO();
+		checkwin();
+		document.getElementById("5").disabled = true;
+	}
+	document.getElementById("6").onclick = function() {
+		document.getElementById("X6").style.display = "block";
+		document.getElementById("null6").style.display = "none";
+		checkO();
+		checkwin();
+		document.getElementById("6").disabled = true;
+	}
+	document.getElementById("7").onclick = function() {
+		document.getElementById("X7").style.display = "block";
+		document.getElementById("null7").style.display = "none";
+		checkO();
+		checkwin();
+		document.getElementById("7").disabled = true;
+	}
+	document.getElementById("8").onclick = function() {
+		document.getElementById("X8").style.display = "block";
+		document.getElementById("null8").style.display = "none";
+		checkO();
+		checkwin();
+		document.getElementById("8").disabled = true;
+	}
+	document.getElementById("9").onclick = function() {
+		document.getElementById("X9").style.display = "block";
+		document.getElementById("null9").style.display = "none";
+		checkO();
+		checkwin();
+		document.getElementById("9").disabled = true;
+	}
 
-function loop(clkid) {
-	document.getElementById(clkid).innerHTML = "X";
-	var id = clkid.id;
-	var newid = Math.floor((Math.random() * 10));
-	if (newid == 0 && newid == id) {
-		loop(id);
+}
+function checkO() 
+	{
+		if (document.getElementById('X1').style.display == "block" && document.getElementById('X3').style.display == "block" && document.getElementById('X2').style.display != "block" && document.getElementById('O2').style.display != "block") {
+			document.getElementById('null2').style.display = "none";
+			document.getElementById('O2').style.display = "block";
+		}
+		else if (document.getElementById('X1').style.display == 'block' && document.getElementById('X7').style.display == 'block' && document.getElementById('X4').style.display != "block" && document.getElementById('O4').style.display != "block") {
+			document.getElementById('null4').style.display = "none";
+			document.getElementById('O4').style.display = "block";
+		}
+		else if (document.getElementById('X1').style.display == 'block' && document.getElementById('X9').style.display == 'block' && document.getElementById('X5').style.display != "block" && document.getElementById('O5').style.display != "block") {
+			document.getElementById('null5').style.display = "none";
+			document.getElementById('O5').style.display = "block";
+		}
+		else if (document.getElementById('X1').style.display == 'block' && document.getElementById('X2').style.display == 'block' && document.getElementById('X3').style.display != "block" && document.getElementById('O3').style.display != "block") {
+			document.getElementById('null3').style.display = "none";
+			document.getElementById('O3').style.display = "block";
+		}
+		else if (document.getElementById('X1').style.display == 'block' && document.getElementById('X4').style.display == 'block' && document.getElementById('X7').style.display != "block" && document.getElementById('O7').style.display != "block") {
+			document.getElementById('null7').style.display = "none";
+			document.getElementById('O7').style.display = "block";
+		}
+		else if (document.getElementById('X1').style.display == 'block' && document.getElementById('X5').style.display == 'block' && document.getElementById('X9').style.display != "block" && document.getElementById('O9').style.display != "block") {
+			document.getElementById('null9').style.display = "none";
+			document.getElementById('O9').style.display = "block";
+		}
+		else if (document.getElementById('X2').style.display == 'block' && document.getElementById('X8').style.display == 'block' && document.getElementById('X5').style.display != "block" && document.getElementById('O5').style.display != "block") {
+			document.getElementById('null5').style.display = "none";
+			document.getElementById('O5').style.display = "block";
+		}
+		else if (document.getElementById('X2').style.display == 'block' && document.getElementById('X5').style.display == 'block' && document.getElementById('X8').style.display != "block" && document.getElementById('O8').style.display != "block") {
+			document.getElementById('null8').style.display = "none";
+			document.getElementById('O8').style.display = "block";
+		}
+		else if (document.getElementById('X3').style.display == 'block' && document.getElementById('X7').style.display == 'block' && document.getElementById('X5').style.display != "block" && document.getElementById('O5').style.display != "block") {
+			document.getElementById('null5').style.display = "none";
+			document.getElementById('O5').style.display = "block";
+		}
+		else if (document.getElementById('X3').style.display == 'block' && document.getElementById('X5').style.display == 'block' && document.getElementById('X7').style.display != "block" && document.getElementById('O7').style.display != "block") {
+			document.getElementById('null7').style.display = "none";
+			document.getElementById('O7').style.display = "block";
+		}
+		else if (document.getElementById('X3').style.display == 'block' && document.getElementById('X6').style.display == 'block' && document.getElementById('X9').style.display != "block" && document.getElementById('O9').style.display != "block") {
+			document.getElementById('null9').style.display = "none";
+			document.getElementById('O9').style.display = "block";
+		}
+		else if (document.getElementById('X4').style.display == 'block' && document.getElementById('X6').style.display == 'block' && document.getElementById('X5').style.display != "block" && document.getElementById('O5').style.display != "block") {
+			document.getElementById('null5').style.display = "none";
+			document.getElementById('O5').style.display = "block";
+		}
+		else if (document.getElementById('X4').style.display == 'block' && document.getElementById('X5').style.display == 'block' && document.getElementById('X6').style.display != "block" && document.getElementById('O6').style.display != "block") {
+			document.getElementById('null6').style.display = "none";
+			document.getElementById('O6').style.display = "block";	
+		}
+		else if (document.getElementById('X5').style.display == 'block' && document.getElementById('X6').style.display == 'block' && document.getElementById('X4').style.display != "block" && document.getElementById('O4').style.display != "block") {
+			document.getElementById('null4').style.display = "none";
+			document.getElementById('O4').style.display = "block";
+		}
+		//Artificial Intelligence(lol) till above and priority order from down here!
+		else if (document.getElementById('X5').style.display != "block" && document.getElementById('O5').style.display != "block") {
+			document.getElementById('null5').style.display = "none";
+			document.getElementById('O5').style.display = "block";
+		}
+		else if (document.getElementById('X1').style.display != "block" && document.getElementById('O1').style.display != "block") {
+			document.getElementById('null1').style.display = "none";
+			document.getElementById('O1').style.display = "block";
+		}
+		else if (document.getElementById('X3').style.display != "block" && document.getElementById('O3').style.display != "block") {
+			document.getElementById('null3').style.display = "none";
+			document.getElementById('O3').style.display = "block";
+		}
+		else if (document.getElementById('X7').style.display != "block" && document.getElementById('O7').style.display != "block") {
+			document.getElementById('null7').style.display = "none";
+			document.getElementById('O7').style.display = "block";
+		}
+		else if (document.getElementById('X9').style.display != "block" && document.getElementById('O9').style.display != "block") {
+			document.getElementById('null9').style.display = "none";
+			document.getElementById('O9').style.display = "block";
+		}
+		else if (document.getElementById('X4').style.display != "block" && document.getElementById('O4').style.display != "block") {
+			document.getElementById('null4').style.display = "none";
+			document.getElementById('O4').style.display = "block";
+		}
+		else if (document.getElementById('X2').style.display != "block" && document.getElementById('O2').style.display != "block") {
+			document.getElementById('null2').style.display = "none";
+			document.getElementById('O2').style.display = "block";
+		}
+		else if (document.getElementById('X6').style.display != "block" && document.getElementById('O6').style.display != "block") {
+			document.getElementById('null6').style.display = "none";
+			document.getElementById('O6').style.display = "block";
+		}
+		else if (document.getElementById('X8').style.display != "block" && document.getElementById('O8').style.display != "block") {
+			document.getElementById('null8').style.display = "none";
+			document.getElementById('O8').style.display = "block";
+		}
 	}
+
+function checkwin() {
+	var X1s = document.getElementById('X1');
+	var X2s = document.getElementById('X2');
+	var X3s = document.getElementById('X3');
+	var X4s = document.getElementById('X4');
+	var X5s = document.getElementById('X5');
+	var X6s = document.getElementById('X6');
+	var X7s = document.getElementById('X7');
+	var X8s = document.getElementById('X8');
+	var X9s = document.getElementById('X9');
+	var O1s = document.getElementById('O1');
+	var O2s = document.getElementById('O2');
+	var O3s = document.getElementById('O3');
+	var O4s = document.getElementById('O4');
+	var O5s = document.getElementById('O5');
+	var O6s = document.getElementById('O6');
+	var O7s = document.getElementById('O7');
+	var O8s = document.getElementById('O8');
+	var O9s = document.getElementById('O9');
 	
-	if (id != newid) {
-		document.getElementById(newid).innerHTML = "O";
+
+	//wins 123 159 147 258 357 369 456
+
+	if ((X1s.style.display == "block" && X2s.style.display == "block" && X3s.style.display == "block") || (X1s.style.display == "block" && X5s.style.display == "block" && X9s.style.display == "block") || (X1s.style.display == "block" && X4s.style.display == "block" && X7s.style.display == "block") || (X2s.style.display == "block" && X5s.style.display == "block" && X8s.style.display == "block") || (X3s.style.display == "block" && X5s.style.display == "block" && X7s.style.display == "block") || (X3s.style.display == "block" && X6s.style.display == "block" && X9s.style.display == "block") || (X4s.style.display == "block" && X5s.style.display == "block" && X6s.style.display == "block") ) {
+		document.getElementById('X1').style.backgroundColor = "green";
+		document.getElementById('X2').style.backgroundColor = "green";
+		document.getElementById('X3').style.backgroundColor = "green";
+		document.getElementById('X4').style.backgroundColor = "green";
+		document.getElementById('X5').style.backgroundColor = "green";
+		document.getElementById('X6').style.backgroundColor = "green";
+		document.getElementById('X7').style.backgroundColor = "green";
+		document.getElementById('X8').style.backgroundColor = "green";
+		document.getElementById('X9').style.backgroundColor = "green";
+		
+	
 	}
-	var idv1 = document.getElementById('1').innerHTML;
-	var idv2 = document.getElementById('2').innerHTML;
-	var idv3 = document.getElementById('3').innerHTML;
-	var idv4 = document.getElementById('4').innerHTML;
-	var idv5 = document.getElementById('5').innerHTML;
-	var idv6 = document.getElementById('6').innerHTML;
-	var idv7 = document.getElementById('7').innerHTML;
-	var idv8 = document.getElementById('8').innerHTML;
-	var idv9 = document.getElementById('9').innerHTML;
-	if ( idv1 == idv2 == idv3 =="X") {
-		alert('X wins');
+	if ((O1s.style.display == "block" && O2s.style.display == "block" && O3s.style.display == "block") || (O1s.style.display == "block" && O5s.style.display == "block" && O9s.style.display == "block") || (O1s.style.display == "block" && O4s.style.display == "block" && O7s.style.display == "block") || (O2s.style.display == "block" && O5s.style.display == "block" && O8s.style.display == "block") || (O3s.style.display == "block" && O5s.style.display == "block" && O7s.style.display == "block") || (O3s.style.display == "block" && O6s.style.display == "block" && O9s.style.display == "block") || (O4s.style.display == "block" && O5s.style.display == "block" && O6s.style.display == "block") ) {
+		document.getElementById('O1').style.backgroundColor = "green";
+		document.getElementById('O2').style.backgroundColor = "green";
+		document.getElementById('O3').style.backgroundColor = "green";
+		document.getElementById('O4').style.backgroundColor = "green";
+		document.getElementById('O5').style.backgroundColor = "green";
+		document.getElementById('O6').style.backgroundColor = "green";
+		document.getElementById('O7').style.backgroundColor = "green";
+		document.getElementById('O8').style.backgroundColor = "green";
+		document.getElementById('O9').style.backgroundColor = "green";
+		setTimeout(function() {
+			document.getElementById('gametable').style.opacity = "0.8";
+		},400);
+		setTimeout(function() {
+			document.getElementById('gametable').style.opacity = "0.5";
+		},450);
+		setTimeout(function() {
+			document.getElementById('gametable').style.opacity = "0.3";
+		},500);
+		setTimeout(function() {
+			document.getElementById('gametable').style.transform = "scale(0.5,0.5)";
+		},500);
+		setTimeout(function() {
+			document.getElementById('scoreboard').style.display = "block";
+			document.getElementById('wingame').style.display = "block";
+		},700);
 	}
+	if ((X1s.style.display == "block" || O1s.style.display == "block") && (X2s.style.display == "block" || O2s.style.display == "block") && (X3s.style.display == "block" || O3s.style.display == "block") && (X4s.style.display == "block" || O4s.style.display == "block") && (X5s.style.display == "block" || O5s.style.display == "block") && (X6s.style.display == "block" || O6s.style.display == "block") && (X7s.style.display == "block" || O7s.style.display == "block") && (X8s.style.display == "block" || O8s.style.display == "block") && (X9s.style.display == "block" || O9s.style.display == "block")) {
+		setTimeout(function() {
+			document.getElementById('gametable').style.opacity = "0.8";
+		},400);
+		setTimeout(function() {
+			document.getElementById('gametable').style.opacity = "0.5";
+		},450);
+		setTimeout(function() {
+			document.getElementById('gametable').style.opacity = "0.3";
+		},500);
+		setTimeout(function() {
+			document.getElementById('gametable').style.transform = "scale(0.5,0.5)";
+		},500);
+		setTimeout(function() {
+			document.getElementById('scoreboard').style.display = "block";
+			document.getElementById('drawgame').style.display = "block";
+		},700);
+	}
+
+
 }	
+
 </script>
 </body>
 </html>
