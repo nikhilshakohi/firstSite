@@ -425,7 +425,7 @@ nav {
   font-size: 2em;
   cursor: pointer;
 }
-#startgame {
+#startgame, #replaygame{
   background-color: rgba(100,50,350,0.7);
   color: white;
   font-size: 1em;
@@ -435,4 +435,13 @@ nav {
 }
 .recentss a:hover {
     background-color: black;
+}
+#gamehome {
+  text-align: center;
+}
+#gametable button {
+  padding: 30px;
+  font-size: 30px;
+  margin: 5px; 
+  cursor: pointer;
 }
