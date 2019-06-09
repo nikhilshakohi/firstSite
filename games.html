@@ -49,11 +49,12 @@
 		<br><br>
 		<h1 style="color: yellow;">TIC TAC TOE Game!!</h1>
 		<button id="startgame" onclick="startgame()" >START GAME</button> 
-		<h3 style="color: lightgreen;">Win this game to get a reward of ₹1000!!:p</h3>
+		<h3 style="color: lightgreen;">Try to Win the game!!</h3>
 		<div id="scoreboard" style="display: none; color: white;align-items: center;">
-			<h2>OOPs! You've missed it! The game and the ₹1000..</h2>
-			<h3 id="wingame" style="display: none;"> <p> You LOST </p>AI wins.. It always have.. :p</h3>
+			<h2 id="notwin">OOPs! You've missed the game..</h2>
+			<h3 id="losegame" style="display: none;"> <p> You LOST </p>AI wins.. It always have.. :p</h3>
 			<h3 id="drawgame" style="display: none;"><p> It's a DRAW</p> Your intelligence level equals to that of AI.. :p</h3>
+			<h3 id="wingame" style="display: none;">Congragulations! :)You've WON! </h3>
 			<h3>Lets have another try...</h3>
 			<button id="replaygame" onclick="window.location.reload();" style="margin: auto;">Try Again</button>
 		</div>
@@ -260,6 +261,18 @@ function checkO()
 			document.getElementById('null4').style.display = "none";
 			document.getElementById('O4').style.display = "block";
 		}
+		else if (document.getElementById('X7').style.display == 'block' && document.getElementById('X9').style.display == 'block' && document.getElementById('X8').style.display != "block" && document.getElementById('O8').style.display != "block") {
+			document.getElementById('null8').style.display = "none";
+			document.getElementById('O8').style.display = "block";
+		}
+		else if (document.getElementById('X9').style.display == 'block' && document.getElementById('X8').style.display == 'block' && document.getElementById('X7').style.display != "block" && document.getElementById('O7').style.display != "block") {
+			document.getElementById('null7').style.display = "none";
+			document.getElementById('O7').style.display = "block";
+		}
+		else if (document.getElementById('X9').style.display == 'block' && document.getElementById('X3').style.display == 'block' && document.getElementById('X6').style.display != "block" && document.getElementById('O6').style.display != "block") {
+			document.getElementById('null6').style.display = "none";
+			document.getElementById('O6').style.display = "block";
+		}
 		//Artificial Intelligence(lol) till above and priority order from down here!
 		else if (document.getElementById('X5').style.display != "block" && document.getElementById('O5').style.display != "block") {
 			document.getElementById('null5').style.display = "none";
@@ -320,9 +333,9 @@ function checkwin() {
 	var O9s = document.getElementById('O9');
 	
 
-	//wins 123 159 147 258 357 369 456
+	//wins 123 159 147 258 357 369 456 789
 
-	if ((X1s.style.display == "block" && X2s.style.display == "block" && X3s.style.display == "block") || (X1s.style.display == "block" && X5s.style.display == "block" && X9s.style.display == "block") || (X1s.style.display == "block" && X4s.style.display == "block" && X7s.style.display == "block") || (X2s.style.display == "block" && X5s.style.display == "block" && X8s.style.display == "block") || (X3s.style.display == "block" && X5s.style.display == "block" && X7s.style.display == "block") || (X3s.style.display == "block" && X6s.style.display == "block" && X9s.style.display == "block") || (X4s.style.display == "block" && X5s.style.display == "block" && X6s.style.display == "block") ) {
+	if ((X1s.style.display == "block" && X2s.style.display == "block" && X3s.style.display == "block") || (X1s.style.display == "block" && X5s.style.display == "block" && X9s.style.display == "block") || (X1s.style.display == "block" && X4s.style.display == "block" && X7s.style.display == "block") || (X2s.style.display == "block" && X5s.style.display == "block" && X8s.style.display == "block") || (X3s.style.display == "block" && X5s.style.display == "block" && X7s.style.display == "block") || (X3s.style.display == "block" && X6s.style.display == "block" && X9s.style.display == "block") || (X4s.style.display == "block" && X5s.style.display == "block" && X6s.style.display == "block") || (X7s.style.display == "block" && X8s.style.display == "block" && X9s.style.display == "block") ) {
 		document.getElementById('X1').style.backgroundColor = "green";
 		document.getElementById('X2').style.backgroundColor = "green";
 		document.getElementById('X3').style.backgroundColor = "green";
@@ -332,7 +345,23 @@ function checkwin() {
 		document.getElementById('X7').style.backgroundColor = "green";
 		document.getElementById('X8').style.backgroundColor = "green";
 		document.getElementById('X9').style.backgroundColor = "green";
-		
+		setTimeout(function() {
+			document.getElementById('gametable').style.opacity = "0.8";
+		},400);
+		setTimeout(function() {
+			document.getElementById('gametable').style.opacity = "0.5";
+		},450);
+		setTimeout(function() {
+			document.getElementById('gametable').style.opacity = "0.3";
+		},500);
+		setTimeout(function() {
+			document.getElementById('gametable').style.transform = "scale(0.5,0.5)";
+		},500);
+		setTimeout(function() {
+			document.getElementById('scoreboard').style.display = "block";
+			document.getElementById('wingame').style.display = "block";
+			document.getElementById('notwin').style.display = "none";
+		},700);
 	
 	}
 	if ((O1s.style.display == "block" && O2s.style.display == "block" && O3s.style.display == "block") || (O1s.style.display == "block" && O5s.style.display == "block" && O9s.style.display == "block") || (O1s.style.display == "block" && O4s.style.display == "block" && O7s.style.display == "block") || (O2s.style.display == "block" && O5s.style.display == "block" && O8s.style.display == "block") || (O3s.style.display == "block" && O5s.style.display == "block" && O7s.style.display == "block") || (O3s.style.display == "block" && O6s.style.display == "block" && O9s.style.display == "block") || (O4s.style.display == "block" && O5s.style.display == "block" && O6s.style.display == "block") ) {
@@ -359,7 +388,7 @@ function checkwin() {
 		},500);
 		setTimeout(function() {
 			document.getElementById('scoreboard').style.display = "block";
-			document.getElementById('wingame').style.display = "block";
+			document.getElementById('losegame').style.display = "block";
 		},700);
 	}
 	if ((X1s.style.display == "block" || O1s.style.display == "block") && (X2s.style.display == "block" || O2s.style.display == "block") && (X3s.style.display == "block" || O3s.style.display == "block") && (X4s.style.display == "block" || O4s.style.display == "block") && (X5s.style.display == "block" || O5s.style.display == "block") && (X6s.style.display == "block" || O6s.style.display == "block") && (X7s.style.display == "block" || O7s.style.display == "block") && (X8s.style.display == "block" || O8s.style.display == "block") && (X9s.style.display == "block" || O9s.style.display == "block")) {
