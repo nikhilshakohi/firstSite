@@ -3,10 +3,7 @@ html {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
- 
-}
-body {
-  background-color:gainsboro;
+ background-color:gainsboro;
 }
 
 ul #notificons{
