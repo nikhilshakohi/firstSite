@@ -31,15 +31,15 @@
 		        <h3>Today:  <span id="day"></span></h3>
 		        <h3>Time:  <span id="time2"></span></h3>
 		    </div>
-		    <div class="modal-body">
+		    <div id="modal-boy">
 		    	<h2 style="font-family: 'Comic Sans MS'">Quick links</h2>
-		        <a id="abouthome"  class="fa fa-home" href="home.html" > Home</a> <br>
-		        <a id="about" class="fa fa-phone" href="contact.html" style="color: yellow">  Contact</a>
-		      	<a id="about" class="fa fa-camera" href="about.html" style="color: lightblue">  About_me</a>
-		      	<a id="about" class="fa fa-info-circle" href="recents.html" style="color: white">  Info</a><br>
-		      	<a id="about" href="sociallinks.html" class="fa fa-group" style="color: #0084FF">  Social_links</a>
-		      	<a id="about" href="techtips.html" class="fa fa-lightbulb-o" style="color: orange">  Tech_tips</a> 
-		      	<a id="about" href="games.html" class="fa fa-gamepad" style="color: #66CD00;">  Games</a>
+		        <a id="abouthome"  class="fa fa-home" href="home.html" ></a> 
+		        <a id="about" class="fa fa-phone" href="contact.html" style="color: yellow"></a>
+		      	<a id="about" class="fa fa-camera" href="about.html" style="color: lightblue"></a>
+		      	<a id="about" class="fa fa-info-circle" href="recents.html" style="color: white"></a><br>
+		      	<a id="about" href="sociallinks.html" class="fa fa-group" style="color: #0084FF"></a>
+		      	<a id="about" href="techtips.html" class="fa fa-lightbulb-o" style="color: orange"></a> 
+		      	<a id="about" href="games.html" class="fa fa-gamepad" style="color: #66CD00;"></a>
 		    </div>
 		    <div class="modal-footer">
 		    	<p>No new updates..</p>
@@ -48,8 +48,15 @@
 	</div>	<br>
 	<div id="homepage">
 		<div id="homepageheaders">
-		<h1 id="welcome" style="text-align: center;font-family: 'Comic Sans MS'; color: white">WELCOME TO MY BLOG</h1>
-	<h3 style="text-align: center;font-family: 'Comic Sans MS'; color: yellow ">This is a mobile oriented website interface</h3>
+		<h1 id="welcome" style="text-align: center;font-family: 'Comic Sans MS'; color: rgb(255,100,10);">WELCOME TO MY BLOG</h1>
+		<p id="time3" style="color: rgb(230,230,230);text-align: center;font-size: 3em;font-family: 'Comic Sans MS';margin: 0;"><span></span></p>
+		<p id="time4" style="color: rgb(230,230,230);text-align: center;font-size: 1em;font-family: 'Comic Sans MS';margin: 0;"></p><br>
+				<form method="get" action="http://www.google.com/search" style="text-align:center" target="_blank">
+			<input type="text"   name="q" size="31"
+				maxlength="255" value="" placeholder="Search for a query in google.." style="background-color: rgba(300,300,300,0.9);margin: 5px;padding: 5px" />
+			<input type="submit" value="Google Search" />
+		</form>
+
 	<p style="text-align: center;color: white; font-size: 1.15em; font-family: 'Comic Sans MS';">Here you can get to know various technology tips and other interesting topics.<br> Press on any icon in the below to enter the page or tap on Notification for quick access! </p>
 	<div class="slideshowcontainer">
     	<div class="mySlides">
@@ -99,6 +106,8 @@
 		s= checktime(s);
  		document.getElementById('time').innerHTML = h + ":" + m + ":" + s;
  		document.getElementById('time2').innerHTML = h + ":" + m + ":" + s;
+ 		document.getElementById('time3').innerHTML = h + ":" + m + ":" + s;
+ 		document.getElementById('time4').innerHTML = today.toDateString();
  		var t= setTimeout(startTime, 500); 
  		document.getElementById('day').innerHTML = today.toDateString();
  		document.getElementById('homepage').className = 'fadeIn';
@@ -191,7 +200,7 @@
 		},76)
 		iconsdissapear();
 		setTimeout(function() {
-			document.getElementById('contactus').style.transform = "scale3d(10,10,100)";
+			document.getElementById('contactus').style.transform = "scale3d(5,5,100)";
 		},950)
 		setTimeout("location.href='contact.html'",1000);
 	}
@@ -201,7 +210,7 @@
 		},201)
 		iconsdissapear();
 		setTimeout(function() {
-			document.getElementById('aboutme').style.transform = "scale3d(10,10,50)";
+			document.getElementById('aboutme').style.transform = "scale3d(5,5,50)";
 		},950)
 		setTimeout("location.href='about.html'",1000);
 	}
@@ -211,7 +220,7 @@
 		},326)
 		iconsdissapear();
 		setTimeout(function() {
-			document.getElementById('recents').style.transform = "scale3d(10,10,50)";
+			document.getElementById('recents').style.transform = "scale3d(5,5,50)";
 		},950)
 		setTimeout("location.href='recents.html'",1000);
 	}
@@ -221,7 +230,7 @@
 		},451)
 		iconsdissapear();
 		setTimeout(function() {
-			document.getElementById('sociallinks').style.transform = "scale3d(10,10,50)";
+			document.getElementById('sociallinks').style.transform = "scale3d(5,5,50)";
 		},950)
 		setTimeout("location.href='sociallinks.html'",1000);
 	}
@@ -231,7 +240,7 @@
 		},576)
 		iconsdissapear();
 		setTimeout(function() {
-			document.getElementById('techtips').style.transform = "scale3d(10,10,50)";
+			document.getElementById('techtips').style.transform = "scale3d(5,5,50)";
 		},950)
 		setTimeout("location.href='techtips.html'",1000);
 	}
@@ -241,7 +250,7 @@
 		},701)
 		iconsdissapear();
 		setTimeout(function() {
-			document.getElementById('updates').style.transform = "scale3d(10,10,50)";
+			document.getElementById('updates').style.transform = "scale3d(5,5,50)";
 		},950)
 		setTimeout("location.href='updates.html'",1000);
 	}
@@ -251,7 +260,7 @@
 		},826)
 		iconsdissapear();
 		setTimeout(function() {
-			document.getElementById('games').style.transform = "scale3d(10,10,50)";
+			document.getElementById('games').style.transform = "scale3d(5,5,1000)";
 		},950)
 		setTimeout("location.href='games.html'",1000);
 	}
