@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html style="background-color: mediumseagreen; background: url('lockscreen.jpg') no-repeat fixed;">
+<html style=" background: url('lockscreen.jpg') no-repeat fixed;">
 
 <head>
 	<link rel="stylesheet" type="text/css" href="style.css">
@@ -11,7 +11,7 @@
 </head>
 
 <body onload= "startTime()">
-	<ul>
+		<ul>
     	<div id="notificons">
   			<div id="notifname">NIKHIL SHAKOHI</div>
     		<li id="time"> </li>
@@ -20,15 +20,17 @@
     	</div>
 	</ul>
 	<br>
+	<div id="lockscreen">
 	<h1 id="locktime" ></h1>
 	<h3 id="today"></h3>
-	<p style="text-align: center;"><a href="home.html"><button id="unlockbtn"><span>UNLOCK BLOG</span></button></a></p><br><br>
+	<p style="text-align: center;"><button id="unlockbtn"><span>UNLOCK BLOG</span></button></p><br><br>
+	</div>  
 	<nav>
 	    <a id="navicons" class="fa fa-chevron-left" href="index.html"></a>
 	    <a id="navicons" class="fa fa-circle" href="index.html"></a>
 	    <a id="navicons" class="fa fa-square" href="index.html" style="font-size: 2em"> </a> 
 	</nav>
-	<sub style=" bottom: 0%; position:fixed; right: 0; font-family: 'Comic Sans MS';" >&copy; NIKHIL 2019 | ALL RIGHTS RESERVED .</sub>  
+	<sub style=" bottom: 0%; position:fixed; right: 0; font-family: 'Comic Sans MS';" >&copy; NIKHIL 2019 | ALL RIGHTS RESERVED .</sub>
 
 <script>
 	function startTime()
@@ -52,6 +54,14 @@
  			i= "0" + i; }
  		return i;
  	} 
+ 	document.getElementById('unlockbtn').onclick = function() {
+ 		document.getElementById('lockscreen').className = "slideUp";
+ 		setTimeout(function() {
+ 			window.location.href = "home.html";
+ 		},700)
+ 	}
+
+
 </script>
 </body>
 </html>
