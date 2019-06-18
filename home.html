@@ -52,29 +52,13 @@
 		<p id="time3" style="color: rgb(230,230,230);text-align: center;font-size: 3em;font-family: 'Comic Sans MS';margin: 0;"><span></span></p>
 		<p id="time4" style="color: rgb(230,230,230);text-align: center;font-size: 1em;font-family: 'Comic Sans MS';margin: 0;"></p><br>
 				<form method="get" action="http://www.google.com/search" style="text-align:center" target="_blank">
-			<input type="text"   name="q" size="50"	maxlength="255" value="" placeholder="Search for a query in google.." style="background-color: rgba(300,300,300,0.9);margin: 5px;padding: 5px" />
-			<input type="submit" value="&#128269" />
+			<input type="text"   name="q" size="40"	maxlength="255" value="" placeholder="Search for a query in google.." style="background-color: rgba(300,300,300,0.9);padding: 5px" />
+			<input type="submit" value="&#128269" style="padding: 3px" />
 		</form>
 
 	<p style="text-align: center;color: white; font-size: 1.15em; font-family: 'Comic Sans MS';">Here you can get to know various technology tips and other interesting topics.<br> Press on any icon in the below to enter the page or tap on Notification for quick access! </p>
-
-        <div class="slideshowcontainer">
-    	<div class="mySlides">
-          <img src="cover1.jpg" style="width: 100%">
-      	</div>
-      	<div class="mySlides">
-          <img src="cover2.jpg" style="width: 100%; height: 12em">
-      	</div>
-      	<div class="mySlides">
-          <img src="cover3.jpg" style="width: 100%">
-      	</div>      
-	</div> <br>
-	<div style="text-align: center;">
-    	<span class="dot"></span>
-	    <span class="dot"></span>
-    	<span class="dot"></span>
-	</div>
-
+	<br>
+	
 		</div>
 	<div id="icons" class="iconpages">
 	    <a id="contactus" title="Contact Us" class="fa fa-phone" style="cursor: pointer;color: yellow; background-color: rgba(220,220,220,0.15); border-radius: 0.6em;"> <p id="iconname" class="iconnameclass">Contact</p></a>    
@@ -141,25 +125,6 @@
 	}
 	function goBack() {
 	  window.history.back();
-	}
-
-	var slideIndex = 0;
-	showSlides();
-	function showSlides() {
-	  var i; 
-	  var slides = document.getElementsByClassName("mySlides");
-	  var dots = document.getElementsByClassName("dot");
-	  for (i = 0; i < slides.length; i++) {
-	    slides[i].style.display = "none";
-	  }
-	  slideIndex++;
-	  if (slideIndex > slides.length) {slideIndex = 1}
-	  for (i = 0; i < dots.length; i++) {
-	    dots[i].className = dots[i].className.replace(" active","");
-	  }
-	  slides[slideIndex-1].style.display = "block";
-	  dots[slideIndex-1].className += " active";
-	  setTimeout(showSlides,3500);
 	}
 
 	function naviconsfadeout(){
