@@ -3,9 +3,8 @@ html {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
- background-color:gainsboro;
+  background-color: gainsboro;
 }
-
 ul #notificons{
   background-color: gainsboro;
   opacity: .5;
@@ -104,6 +103,14 @@ li {
 #unlockbtn:hover span:after {
   opacity: 1;
   right: 0;
+}
+nav, #notificons {
+  position: fixed;
+} 
+@media only screen and (max-width: 650px) {
+  nav, #notificons {
+  position:fixed;
+}
 }
 nav {
   background-color: silver;
@@ -286,7 +293,7 @@ nav {
     left: 0;
     top: 0;
     width: 100%;
-    height: 100%;
+    height: 90%;
     overflow: auto;
     background-color: rgb(0,0,0);
     background-color: rgba(0,0,10,0.9);
@@ -390,7 +397,7 @@ nav {
   font-family: Arial;
 }
 #icons a:hover {
-  filter: contrast(500%) brightness(200%);
+  filter: contrast(300%) brightness(150%);
   transform: scale(1.3);
 }
 
