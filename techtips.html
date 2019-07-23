@@ -11,6 +11,7 @@
 </head>
 
 <body onload= "startTime()">
+	<div id="loader">Loading...</div>
 	<div>
     	<a title="Lock the Blog" href="index.html"> <button id="lockbtn" class="button"><span>&#128274;</span></button></a>
     	<button id="myBtn" title="Notifications" class="button"><span>&#x21E9;</span></button>
@@ -31,25 +32,30 @@
 		        <h3>Today:  <span id="day"></span></h3>
 		        <h3>Time:  <span id="time2"></span></h3>
 		    </div>
-		    <div class="modal-body">
+		    <div id="modal-body" class="modal-body">
 		    	<h2 style="font-family: 'Comic Sans MS'">Quick links</h2>
-		        <a id="abouthome"  class="fa fa-home" href="home.html" > Home</a> <br>
-		        <a id="about" class="fa fa-phone" href="contact.html" style="color: yellow">  Contact</a>
-		      	<a id="about" class="fa fa-camera" href="about.html" style="color: lightblue">  About_me</a>
-		      	<a id="about" class="fa fa-info-circle" href="recents.html" style="color: white">  Info</a><br>
-		      	<a id="about" href="sociallinks.html" class="fa fa-group" style="color: #0084FF">  Social_links</a>
-		      	<a id="about" href="techtips.html" class="fa fa-lightbulb-o" style="color: orange">  Tech_tips</a> 
-		      	<a id="about" href="games.html" class="fa fa-gamepad" style="color: #66CD00;">  Games</a>
+		        <a id="abouthome"  class="fa fa-home" href="home.html" ></a> 
+		        <a id="about0" class="fa fa-phone" href="contact.html" style="color: yellow"></a>
+		      	<a id="about1" class="fa fa-camera" href="about.html" style="color: lightblue"></a>
+		      	<a id="about2" class="fa fa-info-circle" href="recents.html" style="color: white"></a><br>
+		      	<a id="about3" href="sociallinks.html" class="fa fa-group" style="color: #0084FF"></a>
+		      	<a id="about4" href="techtips.html" class="fa fa-lightbulb-o" style="color: orange"></a> 
+		      	<a id="about5" href="games.html" class="fa fa-gamepad" style="color: #66CD00;"></a>
 		    </div>
 		    <div class="modal-footer">
 		    	<p>No new updates..</p>
+		    	<h4 style="color: lightgreen">Enjoy Your Music till then...</h4>
+					<div style="text-align: center;"><audio id="audioboard1" controls>
+	  					<source src="believer.ogg" type="audio/ogg">
+ 				 		<source src="believer.mp3" type="audio/mpeg">Your browser does not support the audio element..</audio>
+ 				 	</div>
 		    </div>
 	  	</div>
 	</div>	<br>
 	<div id="homepage">
 		<h1 style=" font-family: 'Times', 'Times New Roman', 'serif'; text-align: center;color: yellow; text-decoration: underline;">TECHTIPS</h1>
 		<h3 style=" font-family: 'Times', 'Times New Roman', 'serif'; text-align: center;color: yellow;" >There are various ways to use the Internet in this world. Some of them are posted here:</h3>
-		<p style=" text-align: center; color: white; font-size: 1.2em; font-family: 'Comic Sans MS';"> <span style="color: violet">1)</span> You can download any Youtube video in the browser by adding 'ss' before youtube in the link and select the desired resolution and go for it.<br> Eg.To download a video, press 'ss' as follows: https://www.ssyoutube.com/watch?v=Io0fBr1XBUA and pressing enter <br>This is completely legal copyrighted by saveFrom.net <br><br> <span style="color: violet">2)</span> Never clear the recent apps in your phone. This will slow down your phone by a small amount as killing the recent apps will require more battery when you try to open the app again!<br>PS: External apps like cleanMaster will do the same thing to provide you additional RAM but it does drain your battery, so avoid them!  <br><br> <span style="color: violet">3)</span> Ctrl+T opens a new tab and Ctrl+W closes corresponding tab in Chrome and finally; <br>Ctrl+Shift+T reopens an accidentally closed tab in Chrome! <br><br> <span style="color: violet">4)</span> If your pc is hanged or stopped, you can directly open Task manager by pressing CTRL+SHIFT+ESC keys together! <br>[instead of ctrl+alt+del and selecting task manager things]<br> <br> More of the tips and tricks will be updated,Stay Connected to be Updated..!
+		<p id="techtipscontent" style=" text-align: center; color: white; font-size: 1.2em; font-family: 'Comic Sans MS';"> <span style="color: violet">1)</span> You can download any Youtube video in the browser by adding 'ss' before youtube in the link and select the desired resolution and go for it.<br> Eg.To download a video, press 'ss' as follows: https://www.ssyoutube.com/watch?v=Io0fBr1XBUA and pressing enter <br>This is completely legal copyrighted by saveFrom.net <br><br> <span style="color: violet">2)</span> Never clear the recent apps in your phone. This will slow down your phone by a small amount as killing the recent apps will require more battery when you try to open the app again!<br>PS: External apps like cleanMaster will do the same thing to provide you additional RAM but it does drain your battery, so avoid them!  <br><br> <span style="color: violet">3)</span> Ctrl+T opens a new tab and Ctrl+W closes corresponding tab in Chrome and finally; <br>Ctrl+Shift+T reopens an accidentally closed tab in Chrome! <br><br> <span style="color: violet">4)</span> If your pc is hanged or stopped, you can directly open Task manager by pressing CTRL+SHIFT+ESC keys together! <br>[instead of ctrl+alt+del and selecting task manager things]<br> <br> More of the tips and tricks will be updated,Stay Connected to be Updated..!
 		</p>
 		<br><br><br>	
 	</div>
@@ -61,6 +67,7 @@
 	<sub style=" bottom: 0%; position:fixed; right: 0; font-family: 'Comic Sans MS';" >&copy; NIKHIL 2019 | ALL RIGHTS RESERVED .</sub>
 
 <script>
+	document.getElementById('loader').style.display = "none";
 	function startTime()
  	{
  		var today= new Date();
