@@ -5,6 +5,17 @@ html {
   background-size: cover;
   background-color: gainsboro;
 }
+@media only screen and (max-width: 650px) {
+ /* nav, #notificons {
+  position:fixed;
+}*/
+.modal-content {
+    width: 100%;
+}
+#audioboard1, #audioboard2 {
+  width: 70%;
+}
+}
 ul #notificons{
   background-color: gainsboro;
   opacity: .5;
@@ -106,11 +117,6 @@ li {
 }
 nav, #notificons {
   position: fixed;
-} 
-@media only screen and (max-width: 650px) {
-  nav, #notificons {
-  position:fixed;
-}
 }
 nav {
   background-color: silver;
@@ -304,12 +310,14 @@ nav {
     margin: auto;
     padding: 10px;
     border-radius: 2em; 
-    width: 90%;
     height: 100%;
     -webkit-animation-name: animatetop;
     -webkit-animation-duration: 0.7s;
     animation-name: animatetop;
     animation-duration: 0.7s
+}
+.modal-content {
+  width: 50%;
 }
 @-webkit-keyframes animatetop {
     from {top:-300px; opacity:0} 
@@ -348,7 +356,7 @@ nav {
   color: white;
   text-align: center;
 }
-.modal-body #abouthome {
+.modal-body #abouthome, #about0, #about5, #about1, #about2, #about3, #about4 {
   text-decoration: none;
   border-radius: 1em;
   background-color: rgba(0,0,0,0.3);
@@ -358,27 +366,21 @@ nav {
   transition: width 1s, height 1s, transform .3s;
   padding: 20px;
 }
-.modal-body #about {
-  text-decoration: none;
-  font-family: arial;
-  border-radius: 1em;
-  background-color: rgba(0,0,0,0.3);
-  font-size: 1.3em;
-  font-weight: bolder;
-  color: green;
-  transition: width 1s, height 1s, transform .3s;
-  padding: 15px;
-}
-.modal-body #about:hover, #abouthome:hover {
-  color: violet;
-  transform: rotateX(360deg);
+.modal-body #about0:hover, #about1:hover, #about2:hover, #about3:hover, #about4:hover, #about5:hover, #abouthome:hover {
+  background-color: rgba(0,0,0,0.9);
 }
 .modal-footer {
     padding: 2px 16px;
     border-radius: 0em 0em 1em 1em;
     background-color: rgba(255,255,255,0.1);
     color: white;
+    font-family: Comic Sans MS;
 }
+#audioboard1, #audioboard2{
+  text-align: center;
+  padding: 10px;
+  color: blue;
+} 
 #icons{
     text-align: center;
     position: relative;
