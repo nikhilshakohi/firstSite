@@ -317,7 +317,7 @@ nav {
     animation-duration: 0.7s
 }
 .modal-content {
-  width: 50%;
+  width: 100%;
 }
 @-webkit-keyframes animatetop {
     from {top:-300px; opacity:0} 
