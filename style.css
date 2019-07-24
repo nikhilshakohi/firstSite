@@ -5,17 +5,20 @@ html {
   background-size: cover;
   background-color: gainsboro;
 }
-@media only screen and (max-width: 650px) {
+@media only screen and (min-width: 768px) {
  /* nav, #notificons {
   position:fixed;
 }*/
 .modal-content {
+    width: 50%;
+}
+}
+@media only screen and (max-width: 600px) {
+.modal-content {
     width: 100%;
 }
-#audioboard1, #audioboard2 {
-  width: 70%;
 }
-}
+
 ul #notificons{
   background-color: gainsboro;
   opacity: .5;
@@ -316,9 +319,6 @@ nav {
     animation-name: animatetop;
     animation-duration: 0.7s
 }
-.modal-content {
-  width: 100%;
-}
 @-webkit-keyframes animatetop {
     from {top:-300px; opacity:0} 
     to {top:0; opacity:1}
@@ -438,8 +438,7 @@ nav {
   background-color: rgba(100,50,350,0.7);
   color: white;
   font-size: 1em;
-  padding: 1em;
-  margin-left: 50px;  
+  padding: 1em;  
   cursor: pointer;
 }
 .recentss a:hover {
