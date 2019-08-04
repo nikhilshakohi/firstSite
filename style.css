@@ -12,10 +12,16 @@ html {
 .modal-content {
     width: 50%;
 }
+.recentss{
+  margin: 0 20%;
+}
 }
 @media only screen and (max-width: 600px) {
 .modal-content {
     width: 100%;
+}
+.recentss{
+  margin: 100%;
 }
 }
 
