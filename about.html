@@ -51,11 +51,12 @@
 		    </div>
 	  	</div>
 	</div>	<br>
-	<div id="homepage">
+	<div id="loader"></div>
+	<div id="homepage" style="display: none;">
 		<div style="text-align: center; font-family: 'Arial'">
 			<h2 style="color:white; margin-top: 2%; font-family: 'Comic Sans MS';">MY INFO</h2>
-			<img style="height: 15em; width:10em;" src="nikhil.jpg">
-			<p style="color: yellow; font-size: 1.2em; font-weight: bold;">I am NIKHIL SHAKOHI <br>I'm pursuing my BTech in ELECTRONICS AND COMMUNICATION ENGINEERING branch in ANDHRA UNIVERSITY <br> Coding is my hobby.<br> And by the way, the pic was in the year 2015,<br>To stay Updated, stay connected!!!</p>	
+			<img style="height: 15em; width:11em;border-radius: 100%" src="nikhil.jpg" alt="Myself"><br><br>
+			<p id="aboutpara" style="color: yellow; font-size: 1.2em; font-weight: bold;">I am NIKHIL SHAKOHI <br>I'm pursuing my BTech in ELECTRONICS AND COMMUNICATION ENGINEERING branch in ANDHRA UNIVERSITY <br> Coding is my hobby.<br> And by the way, the pic was in the year 2015,<br>To stay Updated, stay connected!!!</p>	
 		</div> <br><br><br>
 	</div>
 	<nav>
@@ -79,6 +80,8 @@
  		var t= setTimeout(startTime, 500); 
  		document.getElementById('day').innerHTML = today.toDateString();
  		document.getElementById('homepage').className = 'fadeIn';
+ 		document.getElementById('loader').style.display='none';
+ 		document.getElementById('homepage').style.display='block';
  	}
  	function checktime(i)
  	{
@@ -101,11 +104,20 @@
 	    modal.style.display = "block";
 	}
 	span.onclick = function() {
-	    modal.style.display = "none";
+	    document.getElementById("myModal").className="slideUp";
+		setTimeout(function(){
+	    		modal.style.display = "none";
+			    document.getElementById("myModal").className="modal";	
+	    	},300);
 	}
 	window.onclick = function(event) {
 	    if (event.target == modal) {
-	        modal.style.display = "none";
+	        document.getElementById("myModal").className="slideUp";
+	    	setTimeout(function(){
+	    		modal.style.display = "none";
+			    document.getElementById("myModal").className="modal";		
+	    	},300);
+	    	
 	    }
 	}
 	function goBack() {
