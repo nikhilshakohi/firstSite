@@ -50,7 +50,8 @@
 		    </div>
 	  	</div>
 	</div>	<br>
-	<div id="gamehome" style="font-family: Comic Sans MS">
+	<div id="loader"></div>
+	<div id="gamehome" style="font-family: Comic Sans MS;display: none;">
 		<br><br>
 		<h1 style="color: yellow;">TIC TAC TOE Game!!</h1>
 		<button id="startgame" onclick="startgame()" >START GAME</button> 
@@ -100,7 +101,9 @@
     document.getElementById('time').innerHTML = h + ":" + m + ":" + s;
     var t= setTimeout(startTime, 500); 
     document.getElementById('day').innerHTML = today.toDateString();
-    document.getElementById('homepage').className = 'fadeIn';
+    document.getElementById('gamehome').className = 'fadeIn';
+    document.getElementById('loader').style.display='none';
+	document.getElementById('gamehome').style.display='block';
   }
   function checktime(i)
   {
@@ -111,7 +114,7 @@
 
   function naviconsfadeout(){
 		setTimeout(function() {
-		document.getElementById('homepage').className = 'fadeOut';
+		document.getElementById('gamehome').className = 'fadeOut';
 	},100);
 		setTimeout("location.href='home.html'",500);
 	}
@@ -126,14 +129,23 @@ btn.onclick = function() {
     modal.style.display = "block";
 }
 
-span.onclick = function() {
-    modal.style.display = "none";
-}
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
+	span.onclick = function() {
+	    document.getElementById("myModal").className="slideUp";
+		setTimeout(function(){
+	    		modal.style.display = "none";
+			    document.getElementById("myModal").className="modal";	
+	    	},300);
+	}
+	window.onclick = function(event) {
+	    if (event.target == modal) {
+	        document.getElementById("myModal").className="slideUp";
+	    	setTimeout(function(){
+	    		modal.style.display = "none";
+			    document.getElementById("myModal").className="modal";		
+	    	},300);
+	    	
+	    }
+	}
 function goBack() {
   window.history.back();
 }
