@@ -12,8 +12,11 @@ html {
 .modal-content {
     width: 50%;
 }
-.recentss{
+.recentss, #techtipscontent{
   margin: 0 20%;
+}
+#aboutpara{
+ margin:0 30%;
 }
 }
 @media only screen and (max-width: 600px) {
@@ -21,6 +24,28 @@ html {
     width: 100%;
 }
 }
+
+#loader {
+  margin:15% auto;
+  border: 16px solid rgba(100,200,50,1);
+  border-radius: 50%;
+  border-top: 16px solid rgba(50,100,200,1);
+  width: 10em;
+  height: 10em;
+  -webkit-animation: spin 2s linear infinite; 
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
 
 ul #notificons{
   background-color: gainsboro;
