@@ -65,16 +65,22 @@
 
 	<p style="text-align: center;color: white; font-size: 1.15em; font-family: 'Comic Sans MS';">This is a fun site. Enjoy the site by exploring its contents<br> Press on any icon in the below to enter the page or tap on Notification for quick access!<br><sub>For any queries, feedback or suggestions, hit the contact icon or ping me on the social sites</sub></p>
 	<br>
-	<div style="text-align: center;"><audio style="width: 20em" id="audioboard2" controls>
-  				<source src="believer.ogg" type="audio/ogg">
- 		 		<source src="believer.mp3" type="audio/mpeg">Your browser does not support the audio element.
+	<div style="display: flex;justify-content: center;color: white;width: 600px;margin-left: auto;margin-right: auto;">
+		<div><img src="friendscover.jpg" height="60px" width="60px" style="border-radius: 50%"></div>&nbsp;&nbsp;
+		<div><h2>F.R.I.E.N.D.S</h2></div>
+		<div style="text-align: center;"><audio style="width: 20em" id="audioboard2" controls>
+  				<source src="friends.ogg" type="audio/ogg">
+ 		 		<source src="friends.mp3" type="audio/mpeg">Your browser does not support the audio element.
 		</audio></div>
+		<a href="music.html" style="color: yellow">See more</a>
+	</div>
 	</div>
 	<div id="icons" class="iconpages">
 	    <a id="contactus" title="Contact Us" class="fa fa-phone" style="cursor: pointer;color: yellow; background-color: rgba(220,220,220,0.15); border-radius: 0.6em;"> <p id="iconname" class="iconnameclass">Contact</p></a>    
     	<a id="aboutme" title="About Me" class="fa fa-camera"  style="cursor: pointer;color: lightblue; background-color: rgba(220,220,220,0.15); border-radius: 0.6em;"><p id="iconname" class="iconnameclass">About me</p></a>    
 	    <a id="recents" title="Info" class="fa fa-info-circle" style="cursor: pointer;color: white; background-color: rgba(220,220,220,0.15); border-radius: 0.6em;"><p id="iconname" class="iconnameclass">Info</p></a>   
 	    <a id="sociallinks" title="Social links" class="fa fa-group" style="cursor: pointer;color: #0084FF; background-color: rgba(220,220,220,0.15); border-radius: 0.6em;"><p id="iconname" class="iconnameclass">Social</p></a>  
+	     <a id="music" title="Songs" class="fa fa-music" style="cursor: pointer;color: #66CD00; background-color: rgba(220,220,220,0.15); border-radius: 0.6em;"> <p id="iconname" class="iconnameclass">Music</p> </a>  
 	    <a id="techtips" title="Tech tips" class="fa fa-lightbulb-o" style="cursor: pointer;color: orange; background-color: rgba(220,220,220,0.15); border-radius: 0.6em;"> <p id="iconname" class="iconnameclass">Tech tips</p> </a>  
 	    <a id="updates" title="Updates" class="fa fa-refresh" style="cursor: pointer;color: #b0c4de; background-color: rgba(220,220,220,0.15); border-radius: 0.6em;"> <p id="iconname" class="iconnameclass">Updates</p></a>    
 	    <a id="games" title="Games" class="fa fa-gamepad" style="cursor: pointer;color: #66CD00; background-color: rgba(220,220,220,0.15); border-radius: 0.6em;"> <p id="iconname" class="iconnameclass">Games</p> </a>  
@@ -170,6 +176,9 @@
 		},450)
 		setTimeout(function() {
 			document.getElementById('techtips').style.opacity = "0";	
+		},500)
+		setTimeout(function() {
+			document.getElementById('techtips').style.opacity = "0";	
 		},575)
 		setTimeout(function() {
 			document.getElementById('updates').style.opacity = "0";	
@@ -220,6 +229,16 @@
 			document.getElementById('sociallinks').style.transform = "scale3d(5,5,50)";
 		},950)
 		setTimeout("location.href='sociallinks.html'",1000);
+	}
+	document.getElementById("music").onclick = function() {
+		setTimeout(function() {
+			document.getElementById('music').style.opacity = "1";	
+		},500)
+		iconsdissapear();
+		setTimeout(function() {
+			document.getElementById('music').style.transform = "scale3d(5,5,50)";
+		},950)
+		setTimeout("location.href='music.html'",1000);
 	}
 	document.getElementById("techtips").onclick = function() {
 		setTimeout(function() {
