@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html style=" background: url('lockscreen1.jpg') no-repeat fixed;">
+
+<head>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="icon" type="image/jpg" href="logo.jpg">
+	<title>Info</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body onload= "startTime()">
+	<div>
+    	<a title="Lock the Site" href="index.html"> <button id="lockbtn" class="button"><span>&#128274;</span></button></a>
+    	<button id="myBtn" title="Notifications" class="button"><span>&#x21E9;</span></button>
+ 	 </div>
+	<ul>
+    	<div id="notificons">
+    		<li id="time"> </li>
+    	    <li id= "battery" class="fa" >&#xf240;</li>  
+            <li id="wifi" class="fa fa-wifi" aria-hidden="true"></li>
+    	</div>
+	</ul>
+	<br>
+	<div id="myModal" class="modal">
+		<div class="modal-content">
+		    <div class="modal-header">
+		    	<span id="modalclose" class="close">&times;</span>
+		        <h2 style="font-family: 'Comic Sans MS';text-align: center;">Notifications</h2>
+		        <h3>Today:  <span id="day"></span></h3>
+		        <h3>Time:  <span id="time2"></span></h3>
+		    </div>
+		    <div id="modal-body" class="modal-body">
+		    	<h2 style="font-family: 'Comic Sans MS'">Quick links</h2>
+		        <a id="abouthome"  class="fa fa-home" href="home.html" ></a> 
+		        <a id="about0" class="fa fa-phone" href="contact.html" style="color: yellow"></a>
+		      	<a id="about1" class="fa fa-camera" href="about.html" style="color: lightblue"></a>
+		      	<a id="about2" class="fa fa-info-circle" href="recents.html" style="color: white"></a><br>
+		      	<a id="about3" href="sociallinks.html" class="fa fa-group" style="color: #0084FF"></a>
+		      	<a id="about4" href="techtips.html" class="fa fa-lightbulb-o" style="color: orange"></a> 
+		      	<a id="about5" href="games.html" class="fa fa-gamepad" style="color: #66CD00;"></a>
+		    </div>
+		    <div class="modal-footer">
+		    	<p>No new updates..</p>
+		    	<h4 style="color: lightgreen">Enjoy Your Music till then...</h4>
+					<div style="text-align: center;"><audio id="audioboard1" controls>
+	  					<source src="believer.ogg" type="audio/ogg">
+ 				 		<source src="believer.mp3" type="audio/mpeg">Your browser does not support the audio element..</audio>
+ 				 	</div>
+		    </div>
+	  	</div>
+	</div>	<br>
+	<div id="loader"></div>
+	<div id="homepage" style="display: none;">
+		<div style="font-family: 'Comic Sans MS'; font-size: 1.2em">			
+		<h2 style="color: yellow; margin-top: 1em; text-align:center;">WELCOME to Music</h2>
+		<h3 style="color: lightgreen; margin-top: 1em; text-align:center;">Here are few of the best songs!</h3>
+		<div style="display: flex;color: white">
+			<div><img src="friendscover.jpg" height="60px" width="60px" style="border-radius: 50%"></div>&nbsp;&nbsp;
+			<div style="text-align: center;"><audio style="width: 20em" id="audioboard2" controls>
+	  				<source src="friends.ogg" type="audio/ogg">
+	 		 		<source src="friends.mp3" type="audio/mpeg">Your browser does not support the audio element.
+			</audio></div>
+			<div><h3 style="white-space: nowrap;">&nbsp;F.R.I.E.N.D.S  &nbsp;&nbsp;|| &nbsp;&nbsp;Anne Marie and Marshemello</h3></div>
+		</div>
+		<div style="display: flex;color: white">
+			<div><img src="believercover.jpg" height="60px" width="60px" style="border-radius: 50%"></div>&nbsp;&nbsp;
+			<div style="text-align: center;"><audio style="width: 20em" id="audioboard2" controls>
+	  				<source src="believer.ogg" type="audio/ogg">
+	 		 		<source src="believer.mp3" type="audio/mpeg">Your browser does not support the audio element.
+			</audio></div>
+			<div><h3 style="white-space: nowrap;">&nbsp;Believer  &nbsp;&nbsp;|| &nbsp;&nbsp;Imagine Dragons</h3></div>
+		</div>
+		<div style="display: flex;color: white">
+			<div><img src="onmywaycover.jpg" height="60px" width="60px" style="border-radius: 50%"></div>&nbsp;&nbsp;
+			<div style="text-align: center;"><audio style="width: 20em" id="audioboard2" controls>
+	  				<source src="onmyway.ogg" type="audio/ogg">
+	 		 		<source src="onmyway.mp3" type="audio/mpeg">Your browser does not support the audio element.
+			</audio></div>
+			<div><h3 style="white-space: nowrap;">&nbsp;On My way  &nbsp;&nbsp;|| &nbsp;&nbsp;Alan Walker</h3></div>
+		</div>
+		<div style="display: flex;color: white">
+			<div><img src="battlesymphonycover.jpg" height="60px" width="60px" style="border-radius: 50%"></div>&nbsp;&nbsp;
+			<div style="text-align: center;"><audio style="width: 20em" id="audioboard2" controls>
+	  				<source src="battlesymphony.ogg" type="audio/ogg">
+	 		 		<source src="battlesymphony.mp3" type="audio/mpeg">Your browser does not support the audio element.
+			</audio></div>
+			<div><h3 style="white-space: nowrap;">&nbsp;Battle Symphony  &nbsp;&nbsp;|| &nbsp;&nbsp;Linkin Park</h3></div>
+		</div>
+		<div style="display: flex;color: white">
+			<div><img src="closercover.png" height="60px" width="60px" style="border-radius: 50%"></div>&nbsp;&nbsp;
+			<div style="text-align: center;"><audio style="width: 20em" id="audioboard2" controls>
+	  				<source src="closer.ogg" type="audio/ogg">
+	 		 		<source src="closer.mp3" type="audio/mpeg">Your browser does not support the audio element.
+			</audio></div>
+			<div><h3 style="white-space: nowrap;">&nbsp;Closer  &nbsp;&nbsp;|| &nbsp;&nbsp;The Chainsmokers</h3></div>
+		</div>
+		</div>
+		<br><br><br>	<br>	
+	</div>
+	<nav>
+	    <a id="navicons" class="fa fa-chevron-left" onclick="naviconsfadeout()" ></a>
+	    <a id="navicons" class="fa fa-circle" onclick="naviconsfadeout()" ></a>
+	    <a id="navicons" class="fa fa-square" href="recents.html" style="font-size: 2em"> </a> 
+	</nav>
+	<sub style=" bottom: 0%; position:fixed; right: 0; font-family: 'Comic Sans MS';" >&copy; NIKHIL 2019 | ALL RIGHTS RESERVED .</sub>
+
+<script>
+	function startTime()
+ 	{
+ 		var today= new Date();
+ 		var h= today.getHours();
+ 		var m= today.getMinutes();
+ 		var s= today.getSeconds();
+		h= checktime(h);		
+ 		m= checktime(m);
+		s= checktime(s);
+ 		document.getElementById('time').innerHTML = h + ":" + m + ":" + s;
+ 		var t= setTimeout(startTime, 500); 
+ 		document.getElementById('day').innerHTML = today.toDateString();
+ 		document.getElementById('homepage').className = 'fadeIn';
+ 		document.getElementById('loader').style.display='none';
+ 		document.getElementById('homepage').style.display='block';
+ 	}
+ 	function checktime(i)
+ 	{
+ 		if(i<10) {
+ 			i= "0" + i; }
+ 		return i;
+ 	} 
+
+ 	function naviconsfadeout(){
+		setTimeout(function() {
+		document.getElementById('homepage').className = 'fadeOut';
+	},100);
+		setTimeout("location.href='home.html'",500);
+	}
+
+	var modal = document.getElementById('myModal');
+	var btn = document.getElementById("myBtn");
+	var span = document.getElementsByClassName("close")[0];
+	btn.onclick = function() {
+	    modal.style.display = "block";
+	}
+	span.onclick = function() {
+	    document.getElementById("myModal").className="slideUp";
+		setTimeout(function(){
+	    		modal.style.display = "none";
+			    document.getElementById("myModal").className="modal";	
+	    	},300);
+	}
+	window.onclick = function(event) {
+	    if (event.target == modal) {
+	        document.getElementById("myModal").className="slideUp";
+	    	setTimeout(function(){
+	    		modal.style.display = "none";
+			    document.getElementById("myModal").className="modal";		
+	    	},300);
+	    	
+	    }
+	}
+	function goBack() {
+	  window.history.back();
+	}
+	document.addEventListener('play', function(e){
+    var audios = document.getElementsByTagName('audio');
+    for(var i = 0, len = audios.length; i < len;i++){
+        if(audios[i] != e.target){
+            audios[i].pause();
+        }
+    }
+}, true);
+</script>
+</body>
+</html>
