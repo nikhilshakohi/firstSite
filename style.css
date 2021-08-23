@@ -25,8 +25,30 @@ html {
     width: 100%;
 }
 }
-
-#loader {
+@keyframes rotate{
+      0%{transform: rotate(0deg);background-color: limegreen;}
+      50%{transform: rotate(180deg);background-color: orangered;border-radius: 50%;opacity: 0.5;}
+      100%{transform: rotate(360deg);background-color: limegreen;}
+    }
+@keyframes fadeAnimation1{
+      0%{opacity: 1;}
+      33%{opacity: 1;}
+      66%{opacity: 0.2;}
+      99%{opacity: 0.2;}
+    }
+    @keyframes fadeAnimation2{
+      0%{opacity: 0.2;}
+      33%{opacity: 1;}
+      66%{opacity: 1;}
+      99%{opacity: 0.2;}
+    }
+    @keyframes fadeAnimation3{
+      0%{opacity: 0.2;}
+      33%{opacity: 0.2;}
+      66%{opacity: 1;}
+      99%{opacity: 1;}
+    }    
+/*#loader {
   margin:15% auto;
   border: 10px solid rgba(100,200,50,1);
   border-radius: 50%;
@@ -36,7 +58,7 @@ html {
   -webkit-animation: spin 2s linear infinite; 
   animation: spin 2s linear infinite;
 }
-
+*/
 @-webkit-keyframes spin {
   0% { -webkit-transform: rotate(0deg); }
   100% { -webkit-transform: rotate(360deg); }
@@ -154,7 +176,7 @@ nav, #notificons {
 nav {
   background-color: silver;
   text-align: center;
-  opacity: .5;
+  opacity: .2;
   bottom: 0px;
   position:fixed;
   left: 0;
@@ -166,6 +188,10 @@ nav {
   color: blue;
   text-decoration: none;
   cursor: pointer;
+  opacity: 1 !important;
+}
+#navicons:hover{
+  color: rgba(0, 100, 255, 1.0);
 }
 
 #lockbtn {
