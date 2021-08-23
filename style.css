@@ -4,6 +4,7 @@ html {
   -o-background-size: cover;
   background-size: cover;
   background-color: gainsboro;
+  font-family: Courier New;
 }
 @media only screen and (min-width: 768px) {
  /* nav, #notificons {
@@ -62,24 +63,25 @@ ul #notifname {
   margin-left: 1em;
   font-weight: bold;
   font-size: 18px;
-  font-family: Verdana;
+  font-family: Courier New;
 }
 li {
   float: right;
   display: inline;
   padding-right: 1em;
 }
+#lockscreen{
+  font-family: Courier New;
+}
 #locktime {
   color: white;
   text-align: center;
   font-size: 75px;
-  font-family: 'Arial';
   font-weight: 500;
 }
 #today {
   color: white;
   text-align: center;
-  font-family: 'Comic Sans MS';
   font-size: 25px;
 }
 
@@ -175,7 +177,8 @@ nav {
   color: #FFFFFF;
   text-align: center;
   font-size: 20px;
-  padding:10px 30px 10px 15px;
+  height: 50px;
+  padding: 10px;
   width: 50px;
   top: 20px;
   cursor: pointer;
@@ -184,6 +187,7 @@ nav {
 }
 #lockbtn span {
   cursor: pointer;
+  width: 25px;
   display: inline-block;
   position: relative;
   transition: 0.5s;
@@ -192,7 +196,8 @@ nav {
   content: "LockBlog";
   position: relative;
   opacity: 0;
-  right: 20px;
+  right: 10px;
+  top: -20px;
   transition: 0.5s;
 }
 #lockbtn:hover span {
@@ -200,7 +205,7 @@ nav {
 }
 #lockbtn:hover span:after {
   opacity: 1;
-  right: 0;
+  right: -20px;
 }
 .button {
   border-radius: 100px;
@@ -375,7 +380,7 @@ nav {
   background-color: rgba(255,255,255,0.4);
 }
 .modal-header #day , #time2{
-  font-family: "Arial";
+  font-family: "Courier New";
 }
 .modal-body {
   padding: 5px 50px;
@@ -402,7 +407,11 @@ nav {
     border-radius: 0em 0em 1em 1em;
     background-color: rgba(255,255,255,0.1);
     color: white;
-    font-family: Comic Sans MS;
+    font-family: Courier New;
+}
+audio::-webkit-media-controls-panel{
+   background-color: green;
+   
 }
 #audioboard1, #audioboard2{
   text-align: center;
@@ -424,7 +433,7 @@ nav {
 #iconname {
   font-size: 13px;
   color: white;
-  font-family: Arial;
+  font-family: Courier New;
 }
 #icons a:hover {
   filter: contrast(300%) brightness(150%);
