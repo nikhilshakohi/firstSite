@@ -10,8 +10,12 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
-<body class="body" onload= "startTime()">
-	<div>
+<body class="body" onload= "startTime();showPage();">
+	<div id="loader" style="display: flex;width: 100%;margin-top: 200px;justify-content: center;color: white;"><br><br><br><br>
+		<div><h2 style="text-align: center;">Loading<span style="animation: fadeAnimation1 1s ease-in-out infinite;">.</span><span style="animation: fadeAnimation2 1s ease-in-out infinite;">.</span><span style="animation: fadeAnimation3 1s ease-in-out infinite;">.</span></h2>
+		<div style="height:50px;width: 50px;background-color: green;animation: rotate 1s infinite linear;margin-left: auto;margin-right: auto;"></div></div>
+	</div>
+	<div id="content" style="display:none"><div><div>
     	<a title="Lock the Site" href="index.html">
     		<button id="lockbtn" class="button"><span>&#128274;</span></button>
     	</a>
@@ -54,7 +58,7 @@
 		    </div>
 	  	</div>
 	</div>	<br>
-	<div id="loader"></div>
+	
 	<div id="homepage" style="display: none;">
 		<div id="homepageheaders">
 		<h1 id="welcome" style="text-align: center;font-family: 'Courier New'; color: rgb(255,100,10);">WELCOME TO MY SITE</h1>
@@ -95,9 +99,19 @@
 	    <a id="navicons" class="fa fa-circle"  onclick="naviconsfadeout()"></a>
 	    <a id="navicons" class="fa fa-square" href="recents.html" style="font-size: 2em"> </a> 
 	</nav>
-	<sub style=" bottom: 0%; position:fixed; right: 0; font-family: 'Courier New';" >&copy; NIKHIL 2019 | ALL RIGHTS RESERVED .</sub>
-    
+	<sub style=" display: none;bottom: 0%; position:fixed; right: 0; font-family: 'Courier New';" >&copy; NIKHIL 2019 | ALL RIGHTS RESERVED .</sub>
+
+</div>
+</body>
 <script>
+	function showPage(){
+		setTimeout(showContent,2000);
+	}
+
+	function showContent(){
+		document.getElementById('loader').style.display="none";
+		document.getElementById('content').style.display="block";
+	}
 	function startTime()
  	{
  		var today= new Date();
@@ -114,8 +128,8 @@
  		var t= setTimeout(startTime, 500); 
  		document.getElementById('day').innerHTML = today.toDateString();
  		document.getElementById('homepage').className = 'fadeIn';
- 		document.getElementById('loader').style.display='none';
- 		document.getElementById('homepage').style.display='block';
+ 	/*	document.getElementById('loader').style.display='none';
+ 	*/	document.getElementById('homepage').style.display='block';
  	}
  	function checktime(i)
  	{
@@ -274,5 +288,4 @@
 	}
 
 </script>
-</body>
 </html>
