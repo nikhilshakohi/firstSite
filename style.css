@@ -4,7 +4,7 @@ html {
   -o-background-size: cover;
   background-size: cover;
   background-color: gainsboro;
-  font-family: Courier New;
+  font-family: Verdana;
 }
 @media only screen and (min-width: 768px) {
  /* nav, #notificons {
@@ -85,7 +85,7 @@ ul #notifname {
   margin-left: 1em;
   font-weight: bold;
   font-size: 18px;
-  font-family: Courier New;
+  font-family: Verdana;
 }
 li {
   float: right;
@@ -93,7 +93,7 @@ li {
   padding-right: 1em;
 }
 #lockscreen{
-  font-family: Courier New;
+  font-family: Verdana;
 }
 #locktime {
   color: white;
@@ -406,7 +406,7 @@ nav {
   background-color: rgba(255,255,255,0.4);
 }
 .modal-header #day , #time2{
-  font-family: "Courier New";
+  font-family: "Verdana";
 }
 .modal-body {
   padding: 5px 50px;
@@ -433,7 +433,7 @@ nav {
     border-radius: 0em 0em 1em 1em;
     background-color: rgba(255,255,255,0.1);
     color: white;
-    font-family: Courier New;
+    font-family: Verdana;
 }
 audio::-webkit-media-controls-panel{
    background-color: green;
@@ -459,7 +459,7 @@ audio::-webkit-media-controls-panel{
 #iconname {
   font-size: 13px;
   color: white;
-  font-family: Courier New;
+  font-family: Verdana;
 }
 #icons a:hover {
   filter: contrast(300%) brightness(150%);
