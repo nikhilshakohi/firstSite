@@ -4,14 +4,14 @@
 <head>
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<title>MY SITE</title>
+	<title>Home</title>
 	<link rel="icon" type="image/jpg" href="logo.jpg">
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body class="body" onload= "startTime();showPage();">
-	<div id="loader" style="display: flex;width: 100%;margin-top: 200px;justify-content: center;color: white;"><br><br><br><br>
+	<div id="loader" style="display: flex;width: 100%;margin-top: 200px;justify-content: center;color: white;">
 		<div><h2 style="text-align: center;">Loading<span style="animation: fadeAnimation1 1s ease-in-out infinite;">.</span><span style="animation: fadeAnimation2 1s ease-in-out infinite;">.</span><span style="animation: fadeAnimation3 1s ease-in-out infinite;">.</span></h2>
 		<div style="height:50px;width: 50px;background-color: green;animation: rotate 1s infinite linear;margin-left: auto;margin-right: auto;"></div></div>
 	</div>
@@ -22,7 +22,7 @@
     	<button id="myBtn" title="Notifications" class="button"><span>&#x21E9;</span></button>
  	 </div>
 	<ul>
-    	<div id="notificons">
+    	<div id="notificons" class="slideDownNav">
     		<strong><li id="time"> </li></strong>
     	    <li id= "battery" class="fa" >&#xf240;</li>  
             <li id="wifi" class="fa fa-wifi" aria-hidden="true"></li>
@@ -50,7 +50,7 @@
 		    <div class="modal-footer">
 		    	<p>No new updates..</p>
 		    	<h4 style="color: lightgreen">Enjoy Your Music till then...</h4>
-					<div style="text-align: center;"><audio id="audioboard1" controls>
+					<div style="text-align: center;"><audio class="audioboard1" controls>
 	  					<source src="believer.ogg" type="audio/ogg">
  				 		<source src="believer.mp3" type="audio/mpeg">Your browser does not support the audio element..</audio>
  				 	</div>
@@ -61,42 +61,45 @@
 	
 	<div id="homepage" style="display: none;">
 		<div id="homepageheaders">
-		<h1 id="welcome" style="text-align: center;font-family: 'Verdana'; color: rgb(255,100,10);">WELCOME TO MY SITE</h1>
+		<h1 id="welcome" class="slideDown" style="text-align: center;font-family: 'Verdana'; color: rgb(255,100,10);">Welcome to the Fun Site</h1>
 		<p id="time3" style="color: rgb(230,230,230);text-align: center;font-size: 3em;font-family: 'Verdana';margin: 0;"><span></span></p>
 		<p id="time4" style="color: rgb(230,230,230);text-align: center;font-size: 1em;font-family: 'Verdana';margin: 0;"></p><br>
-				<form method="get" action="http://www.google.com/search" style="text-align:center;" target="_blank">
+				<!--<form method="get" action="http://www.google.com/search" style="text-align:center;" target="_blank">
 			<input type="text"   name="q" size="40"	maxlength="255" value="" placeholder="Search for a query in google.." style="background-color: rgba(300,300,300,0.7);color: black;padding: 5px;border:none; " />
 			<input type="submit" value="&#128269" style="padding: 3px;background-color: rgba(300,300,300,0.2);border-radius: 100%;font-size: 0.9em;border: none;" />
-		</form>
+		</form>-->
 
-	<p style="text-align: center;color: white; font-size: 1.15em; font-family: 'Verdana';">This is a fun site. Enjoy the site by exploring its contents<br> Press on any icon in the below to enter the page or tap on Notification for quick access!<br><sub>For any queries, feedback or suggestions, hit the contact icon or ping me on the social sites</sub></p>
+	<p style="text-align: center;color: white; font-size: 1.15em; font-family: 'Verdana';">This is a fun site. Enjoy the site by exploring its contents<br> Press on any icon in the below to enter the page!<br><sub>For any queries, feedback or suggestions, hit the contact icon or ping me on the social sites</sub></p>
 	<br>
-	<div style="display: flex;justify-content: center;color: white;">
+	<!--<div style="display: flex;justify-content: center;color: white;">
 		<div><img src="friendscover.jpg" height="60px" width="60px" style="border-radius: 50%"></div>&nbsp;&nbsp;
 		<div><h2>F.R.I.E.N.D.S</h2></div>
 		<a href="music.html" style="color: yellow">See more</a>
-	</div>
-	<div style="text-align: center;"><audio class="audioClass" style="width: 20em" id="audioboard2" controls>
-  				<source src="friends.ogg" type="audio/ogg">
- 		 		<source src="friends.mp3" type="audio/mpeg">Your browser does not support the audio element.
+	</div>-->
+	<div class="audioDiv" title="Open Music" onclick="window.location.href='music.html'">
+		<div><img src="friendscover.jpg" height="50px" width="50px" style="border-radius: 50%"></div>
+		<div style="width: 10px"></div>
+		<div><audio class="audioClass" style="width: 20em" class="audioboard2" controls>
+  				<source src="friends.mp3" type="audio/mpeg">Your browser does not support the audio element.
 		</audio></div>
 	</div>
+	</div>
 	<div id="icons" class="iconpages">
-	    <a id="contactus" title="Contact Us" class="fa fa-phone" style="cursor: pointer;color: yellow; background-color: rgba(220,220,220,0.15); border-radius: 0.6em;"> <p id="iconname" class="iconnameclass">Contact</p></a>    
-    	<a id="aboutme" title="About Me" class="fa fa-camera"  style="cursor: pointer;color: lightblue; background-color: rgba(220,220,220,0.15); border-radius: 0.6em;"><p id="iconname" class="iconnameclass">About me</p></a>    
-	    <a id="recents" title="Info" class="fa fa-info-circle" style="cursor: pointer;color: white; background-color: rgba(220,220,220,0.15); border-radius: 0.6em;"><p id="iconname" class="iconnameclass">Info</p></a>   
-	    <a id="sociallinks" title="Social links" class="fa fa-group" style="cursor: pointer;color: #0084FF; background-color: rgba(220,220,220,0.15); border-radius: 0.6em;"><p id="iconname" class="iconnameclass">Social</p></a>  
-	     <a id="music" title="Songs" class="fa fa-music" style="cursor: pointer;color: #66CD00; background-color: rgba(220,220,220,0.15); border-radius: 0.6em;"> <p id="iconname" class="iconnameclass">Music</p> </a>  
-	    <a id="techtips" title="Tech tips" class="fa fa-lightbulb-o" style="cursor: pointer;color: orange; background-color: rgba(220,220,220,0.15); border-radius: 0.6em;"> <p id="iconname" class="iconnameclass">Tech tips</p> </a>  
-	    <a id="updates" title="Updates" class="fa fa-refresh" style="cursor: pointer;color: #b0c4de; background-color: rgba(220,220,220,0.15); border-radius: 0.6em;"> <p id="iconname" class="iconnameclass">Updates</p></a>    
-	    <a id="games" title="Games" class="fa fa-gamepad" style="cursor: pointer;color: #66CD00; background-color: rgba(220,220,220,0.15); border-radius: 0.6em;"> <p id="iconname" class="iconnameclass">Games</p> </a>  
+	    <a href="#" id="contactus" title="Contact Us" class="fa fa-phone" style="cursor: pointer;color: yellow; background-color: rgba(220,220,220,0.15); border-radius: 0.6em;"> <p id="iconname" class="iconnameclass">Contact</p></a>    
+    	<a href="#" id="aboutme" title="About Me" class="fa fa-camera"  style="cursor: pointer;color: lightblue; background-color: rgba(220,220,220,0.15); border-radius: 0.6em;"><p id="iconname" class="iconnameclass">About me</p></a>    
+	    <a href="#" id="recents" title="Info" class="fa fa-info-circle" style="cursor: pointer;color: white; background-color: rgba(220,220,220,0.15); border-radius: 0.6em;"><p id="iconname" class="iconnameclass">Info</p></a>   
+	    <a href="#" id="sociallinks" title="Social links" class="fa fa-group" style="cursor: pointer;color: #0084FF; background-color: rgba(220,220,220,0.15); border-radius: 0.6em;"><p id="iconname" class="iconnameclass">Social</p></a>  
+	     <a href="#" id="music" title="Songs" class="fa fa-music" style="cursor: pointer;color: #66CD00; background-color: rgba(220,220,220,0.15); border-radius: 0.6em;"> <p id="iconname" class="iconnameclass">Music</p> </a>  
+	    <a href="#" id="techtips" title="Tech tips" class="fa fa-lightbulb-o" style="cursor: pointer;color: orange; background-color: rgba(220,220,220,0.15); border-radius: 0.6em;"> <p id="iconname" class="iconnameclass">Tech tips</p> </a>  
+	    <a href="#" id="updates" title="Updates" class="fa fa-refresh" style="cursor: pointer;color: #b0c4de; background-color: rgba(220,220,220,0.15); border-radius: 0.6em;"> <p id="iconname" class="iconnameclass">Updates</p></a>    
+	    <a href="#" id="games" title="Games" class="fa fa-gamepad" style="cursor: pointer;color: #66CD00; background-color: rgba(220,220,220,0.15); border-radius: 0.6em;"> <p id="iconname" class="iconnameclass">Games</p> </a>  
 		    <hr style="visibility: hidden;">
 	    <br><br>
 	</div>
 	</div>
-	<nav>
-	    <a id="navicons" class="fa fa-chevron-left" onclick="naviconsfadeout()" ></a>
-	    <a id="navicons" class="fa fa-circle"  onclick="naviconsfadeout()"></a>
+	<nav class="slideUpNav">
+	    <a id="navicons" class="fa fa-chevron-left" href="#" ></a>
+	    <a id="navicons" class="fa fa-circle"  href="#"></a>
 	    <a id="navicons" class="fa fa-square" href="recents.html" style="font-size: 2em"> </a> 
 	</nav>
 	<sub style=" display: none;bottom: 0%; position:fixed; right: 0; font-family: 'Verdana';" >&copy; NIKHIL 2019 | ALL RIGHTS RESERVED .</sub>
@@ -137,12 +140,6 @@
  			i= "0" + i; }
  		return i;
  	}
-	document.addEventListener('DOMContentLoaded', 
-  	function() {
-              setTimeout(function(){
-                document.getElementById('welcome').className = 'slideDown';
-              },400);
-	},false);
 	var modal = document.getElementById('myModal');
 	var btn = document.getElementById("myBtn");
 	var span = document.getElementsByClassName("close")[0];
