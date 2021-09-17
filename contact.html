@@ -27,12 +27,12 @@
 		<div class="modal-content">
 		    <div class="modal-header">
 		    	<span id="modalclose" class="close">&times;</span>
-		        <h2 style="font-family: 'Comic Sans MS';text-align: center;">Notifications</h2>
+		        <h2 style="font-family: 'Verdana';text-align: center;">Notifications</h2>
 		        <h3>Today:  <span id="day"></span></h3>
 		        <h3>Time:  <span id="time2"></span></h3>
 		    </div>
 			<div id="modal-body" class="modal-body">
-		    	<h2 style="font-family: 'Comic Sans MS'">Quick links</h2>
+		    	<h2 style="font-family: 'Verdana'">Quick links</h2>
 		        <a id="abouthome"  class="fa fa-home" href="home.html" ></a> 
 		        <a id="about0" class="fa fa-phone" href="contact.html" style="color: yellow"></a>
 		      	<a id="about1" class="fa fa-camera" href="about.html" style="color: lightblue"></a>
@@ -54,28 +54,33 @@
 	<br>
 	<div id="loader"></div>
 	<div id="homepage" style="display: none;">
-		<div style="font-family: 'Comic Sans MS'; font-size: 1.2em;">
-			<h3 style="color: white; text-align: center;">HELLO THERE!</h3>
-			<h3 style="color: white; text-align: center;">THANKS FOR CHECKING IN :)</h3>
-			<p style="text-align: center; color: yellow;font-family: ARIAL">This Site was is created just out of my interest;) Any suggestions or comments are heartly encouraged. <br>You can chat with me &#9993;@<a style="color: white;" href="https://mail.google.com/mail/u/0/#inbox?compose=new" target="_blank">nikhilshakohi@gmail.com</a> or visit any of my social media links! <br>For any queries or suggestions, post in the below form.&#8659;</p> 
-			<form style="color: white; ;font-family: ARIAL; text-align: center;" action="mailto:nikhilshakohi@gmail.com" method="post" enctype="text/plain" onsubmit="return tqmessage();">
-				*Name: <br>
-				<input id="inputbox" type="text" name="name" placeholder="Your name..." required> <br><br>
-				*E-mail: <br>
-				<input id="inputbox" type="email" name="email" placeholder="Your Email..." required> <br><br>
-				Comment: <br>
-				<input id="inputbox" type="text" name="comment" placeholder="Your comment or message or suggestions..." style="height: 4em; width: auto;"> <br><br><br>
-				<input id="submitbutton" style="background-color: #00ff00;" class="contactformbutton" type="submit" value="Send">
-				<input style="background-color: #ff0011;" class="contactformbutton" type="reset" value="Reset">
+		<div style=" font-size: 1.2em;text-align: center;color: white;">
+			<h2>Hello There!</h2>
+			<span style=" color: yellow;font-family: ARIAL">This Site was is created just out of my interest.. <br><!--can be shared via <a style="color: white;" href="https://mail.google.com/mail/u/0/#inbox?compose=new" target="_blank">nikhilshakohi@gmail.com</a>-->
+			 Connect with me via any of my social media links below! <br></span>
+			<div style="display: flex;justify-content: center;margin: 10px;">
+		      <a id="socialfacebookIcon" class="socialIcons fa fa-facebook" href="https://www.facebook.com/nikhil.shakohi.5" target="_blank" > <span id="socialfacebookSub" style="display:none;">FACEBOOK</span></a>  
+		      <a id="socialgithubIcon" class="socialIcons fa fa-github" href="https://github.com/nikhilshakohi" target="_blank" >  <sub id="socialgithubSub" style="display:none;">GITHUB</sub></a>
+		      <a id="socialinstagramIcon" class="socialIcons fa fa-instagram" href="https://www.instagram.com/nikhil_shakohi4" target="_blank" >  <sub id="socialinstagramSub" style="display:none;">INSTAGRAM</sub></a> 
+		      <a id="sociallinkedinIcon" class="socialIcons fa fa-linkedin" href="https://www.linkedin.com/in/nikhil-shakohi-060561126" target="_blank" > <sub id="sociallinkedinSub" style="display:none;">LINKEDIN</sub></a>  
+		      <a id="socialtwitterIcon" class="socialIcons fa fa-twitter" href="https://twitter.com/ShakohiN" target="_blank" > <sub id="socialtwitterSub" style="display:none;">TWITTER</sub></a>  
+			</div><br>
+			<span style="color: yellow;">For any queries or suggestions, post in the below form.&#8659;</span><br>
+			<form style="color: white ;font-family: ARIAL; text-align: center;" action="mailto:nikhilshakohi@gmail.com" method="post" enctype="text/plain" onsubmit="return tqmessage();">
+				<input id="inputbox" type="text" name="name" placeholder="Your name..." required>
+				<input id="inputbox" type="email" name="email" placeholder="Your Email..." required><br>
+				<textarea  id="inputbox" type="text" name="comment" placeholder="Your comment or suggestions..."></textarea> <br>
+				<input id="submitbutton" class="contactformbutton" type="submit" value="Send">
+				<input class="contactformbutton" type="reset" value="Reset">
 			</form>
-		</div>
+		</div><br><br>
 	</div> <br><br><br>
 	<nav>
 	    <a id="navicons" class="fa fa-chevron-left" onclick="naviconsfadeout()" ></a>
 	    <a id="navicons" class="fa fa-circle" onclick="naviconsfadeout()" ></a>
 	    <a id="navicons" class="fa fa-square" href="recents.html" style="font-size: 2em"> </a> 
 	</nav>
-	<sub style=" bottom: 0%; position:fixed; right: 0; font-family: 'Comic Sans MS';" >&copy; NIKHIL 2019 | ALL RIGHTS RESERVED .</sub>
+	<sub style=" bottom: 0%; position:fixed; right: 0; font-family: 'Verdana';" >&copy; NIKHIL 2019 | ALL RIGHTS RESERVED .</sub>
 
 <script>
 	function startTime()

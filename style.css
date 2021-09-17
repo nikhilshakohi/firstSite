@@ -5,6 +5,26 @@ html {
   background-size: cover;
   background-color: gainsboro;
   font-family: Verdana;
+  overflow: overlay;
+  animation: overflowHide 1s ease-in-out;
+}
+@keyframes overflowHide{
+  0%{overflow: hidden;}
+  50%{overflow: hidden;}
+  100%{overflow: overlay;}
+}
+::-webkit-scrollbar{
+  background: rgba(15, 15, 15, 0.5);
+  width: 5px;
+}
+::-webkit-scrollbar-track{
+  background: rgba(50, 50, 50, 0.5);
+}
+::-webkit-scrollbar-thumb{
+  background: rgba(100, 100, 100, 0.5);
+}
+::-webkit-scrollbar-thumb:hover{
+  background: rgba(200, 200, 200, 0.5);
 }
 @media only screen and (min-width: 768px) {
  /* nav, #notificons {
@@ -447,12 +467,26 @@ nav {
 audio::-webkit-media-controls-panel{
    background-color: rgba(50, 50, 50, 0.5);
 }
+audio::-webkit-media-controls-current-time-display{
+    display: none;
+}
+audio::-webkit-media-controls-time-remaining-display{
+  
+}
 .audioDiv{
-  display: inline-block;
+  display: flex;width: 40vw;overflow: auto;margin-left: auto;margin-right: auto;
   text-align: center;justify-content: center;vertical-align: middle;align-items: center;align-content: center;
-  margin-left: 50%;margin-right: -50%; transform: translate(-50%, 0%);/*Miracle happened*/
   padding: 10px 20px;cursor: pointer;border-radius: 10px;
   background-color: rgba(0, 0, 0, 0.3);
+}
+@media only screen and (max-width: 950px){
+  .audioDiv{width: 70vw;}
+}
+@media only screen and (max-width: 540px){
+  .audioDiv{width: 80vw;}
+}
+.audioDiv:hover{
+  background-color: rgba(0, 0, 0, 0.5);
 }
 .audioboard1, .audioboard2{
   text-align: center;
@@ -485,7 +519,7 @@ audio::-webkit-media-controls-panel{
   background-color: rgba(0,0,0,0.5); 
   border: none;
   color: lightgreen;
-  padding: 5px;
+  padding: 15px;margin: 10px;
   font-size: 20px;
   border-radius: 10px;
   box-sizing: border-box;
@@ -496,7 +530,30 @@ audio::-webkit-media-controls-panel{
   font-size: 20px;
   border: none;
   cursor: pointer;
+  background-color: rgb(70, 150, 110);color: white;border-radius: 10px;
 }
+.contactformbutton:hover{background-color: rgb(90, 170, 190);}
+.socialIcons{
+  text-decoration: none; color: white; 
+  padding: 7px 10px; border-radius: 50%; margin: 10px 20px; border: 2px solid;
+  transform: scale(1.5);
+}
+#socialfacebookIcon:hover{
+   background-color: #3b5998;
+}
+#socialgithubIcon:hover{
+   background-color: #333;
+}
+#sociallinkedinIcon:hover{
+   background-color: #007bb6;
+}
+#socialtwitterIcon:hover{
+   background-color: #00b6f1;
+}
+#socialinstagramIcon:hover{
+    background-color: #c32aa3;
+}
+
 
  tr, td{
   border: 2px solid black; 
